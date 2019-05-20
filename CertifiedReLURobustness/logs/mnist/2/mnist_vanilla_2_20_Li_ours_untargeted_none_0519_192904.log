@@ -1,0 +1,106 @@
+2019-05-19 19:29:05.962603: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-05-19 19:29:05.969936: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3393180000 Hz
+2019-05-19 19:29:05.971979: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55ac16978fa0 executing computations on platform Host. Devices:
+2019-05-19 19:29:05.972012: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-19 19:29:06.193976: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-19 19:29:06.195063: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55ac1509f660 executing computations on platform CUDA. Devices:
+2019-05-19 19:29:06.195110: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-19 19:29:06.195118: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-19 19:29:06.195425: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:0a:00.0
+totalMemory: 10.76GiB freeMemory: 9.34GiB
+2019-05-19 19:29:06.195471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:41:00.0
+totalMemory: 10.76GiB freeMemory: 10.60GiB
+2019-05-19 19:29:06.195582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-19 19:29:06.197422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-19 19:29:06.197435: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-19 19:29:06.197441: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-19 19:29:06.197446: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-19 19:29:06.197528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-19 19:29:06.198104: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+2019-05-19 19:29:06.201241: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-19 19:29:06.201376: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-19 19:29:06.201387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-19 19:29:06.201393: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-19 19:29:06.201397: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-19 19:29:06.201485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-19 19:29:06.201696: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+/home/justin/Projects/NN_cert_methods/mnist_small.pkl
+----------------------------------
+Loaded pretrained network
+----------------------------------
+/home/justin/.conda/envs/DeepL/lib/python3.7/site-packages/matplotlib/figure.py:98: MatplotlibDeprecationWarning: 
+Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  "Adding an axes using the same arguments as a previous axes "
+WARNING:tensorflow:From /home/justin/.conda/envs/DeepL/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-19 19:29:10.669523: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+generating labels...
+labels generated
+36 images generated in total.
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+False
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+=================================
+[[0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]]
+[[ -0.28138  -8.684    -0.27798   0.87012  -7.9275   -1.18768 -12.02756
+    8.38751  -4.41186   1.37413]
+ [  2.91423  -2.66221   2.94991   1.52954 -16.84692   2.40569  -0.63743
+  -15.09871   0.56616 -14.71266]
+ [ -6.78606   5.66726  -1.06263  -0.39703  -0.87757  -2.45737  -8.92294
+   -0.07385  -1.47238  -2.51131]
+ [  6.94116 -16.3816   -2.19844  -4.73442 -11.12565  -1.05196  -2.76184
+   -3.42838  -1.9131   -3.79641]
+ [ -3.67596 -10.6072   -3.06174  -4.7316    4.91325  -0.56217  -4.44999
+   -1.75784  -3.95004   1.65752]
+ [ -8.08887   6.03242  -2.83067   0.32141  -1.27814  -2.97801 -13.52068
+    0.77337  -1.26964  -0.99902]
+ [ -7.74978  -6.13186  -5.50858  -4.75909   6.14746   1.74588 -12.01934
+   -3.04494  -3.78711   2.07003]
+ [ -9.29729  -1.76643  -7.37167  -0.7432    1.40386  -1.06475 -17.82806
+   -0.73614  -2.07615   3.4252 ]
+ [ -4.66516 -12.50672  -3.21518  -6.05074   1.79515   1.09685  -4.79382
+  -11.33756  -1.83603  -2.68188]
+ [ -4.4775  -11.11392  -4.50265  -3.47981  -1.17017  -3.20774  -8.19308
+    0.31329  -1.62374   3.38758]]

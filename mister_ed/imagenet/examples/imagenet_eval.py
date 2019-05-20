@@ -84,7 +84,7 @@ def main():
 
     cudnn.benchmark = True
 
-    # Data loading code
+    # Results loading code
     # traindir = os.path.join(args.data, 'train')
     valdir = os.path.join(args.data, 'val')
 
@@ -191,7 +191,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
         if i % args.print_freq == 0:
             print('Epoch: [{0}][{1}/{2}]\t'
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
+                  'Results {data_time.val:.3f} ({data_time.avg:.3f})\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
                   'Acc@1 {top1.val:.3f} ({top1.avg:.3f})\t'
                   'Acc@5 {top5.val:.3f} ({top5.avg:.3f})'.format(

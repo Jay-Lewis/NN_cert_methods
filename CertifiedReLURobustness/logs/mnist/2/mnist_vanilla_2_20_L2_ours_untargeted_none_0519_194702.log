@@ -1,0 +1,2799 @@
+2019-05-19 19:47:04.241157: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-05-19 19:47:04.248425: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3393180000 Hz
+2019-05-19 19:47:04.250083: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55bfc7d995f0 executing computations on platform Host. Devices:
+2019-05-19 19:47:04.250104: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-19 19:47:04.465942: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-19 19:47:04.469104: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55bfc7c43170 executing computations on platform CUDA. Devices:
+2019-05-19 19:47:04.469149: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-19 19:47:04.469157: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-19 19:47:04.469488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:0a:00.0
+totalMemory: 10.76GiB freeMemory: 9.33GiB
+2019-05-19 19:47:04.469543: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:41:00.0
+totalMemory: 10.76GiB freeMemory: 10.60GiB
+2019-05-19 19:47:04.469705: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-19 19:47:04.472279: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-19 19:47:04.472310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-19 19:47:04.472317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-19 19:47:04.472323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-19 19:47:04.472444: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-19 19:47:04.473097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+2019-05-19 19:47:04.475688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-19 19:47:04.475847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-19 19:47:04.475858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-19 19:47:04.475866: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-19 19:47:04.475872: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-19 19:47:04.475964: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-19 19:47:04.476151: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+/home/justin/Projects/NN_cert_methods/mnist_small.pkl
+----------------------------------
+Loaded pretrained network
+----------------------------------
+/home/justin/.conda/envs/DeepL/lib/python3.7/site-packages/matplotlib/figure.py:98: MatplotlibDeprecationWarning: 
+Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  "Adding an axes using the same arguments as a previous axes "
+WARNING:tensorflow:From /home/justin/.conda/envs/DeepL/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-19 19:47:08.567514: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+Hidden layer 0 weight shape: (784, 10)
+Hidden layer 0 bias shape: (10,)
+Hidden layer 1 weight shape: (10, 50)
+Hidden layer 1 bias shape: (50,)
+Hidden layer 2 weight shape: (50, 10)
+Hidden layer 2 bias shape: (10,)
+Last layer weight shape: (10, 10)
+Last layer bias shape: (10,)
+warming up...
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 10 neurons always activated
+layer 2 2 neurons never activated, 8 neurons always activated
+epsilon = 0.01000
+    8.29 < f_c - f_1 < 8.51
+    -0.10 < f_c - f_2 < 0.09
+    -1.28 < f_c - f_3 < -1.02
+    7.52 < f_c - f_4 < 7.78
+    0.79 < f_c - f_5 < 1.02
+    11.59 < f_c - f_6 < 11.91
+    -8.78 < f_c - f_7 < -8.56
+    4.07 < f_c - f_8 < 4.20
+    -1.79 < f_c - f_9 < -1.52
+starting robustness verification on 16 images!
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 10 neurons always activated
+layer 2 2 neurons never activated, 8 neurons always activated
+epsilon = 0.20000
+    6.64 < f_c - f_0 < 11.05
+    15.25 < f_c - f_1 < 18.82
+    6.72 < f_c - f_2 < 10.87
+    5.72 < f_c - f_3 < 8.92
+    13.93 < f_c - f_4 < 18.43
+    7.24 < f_c - f_5 < 11.58
+    16.54 < f_c - f_6 < 25.56
+    10.67 < f_c - f_8 < 15.05
+    4.80 < f_c - f_9 < 8.94
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 4.80
+layer 0 2 neurons never activated, 1 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 2 neurons always activated
+epsilon = 2.00000
+    -15.73 < f_c - f_0 < 34.89
+    -8.81 < f_c - f_1 < 37.33
+    -17.07 < f_c - f_2 < 31.17
+    -22.52 < f_c - f_3 < 28.10
+    -17.32 < f_c - f_4 < 43.62
+    -20.91 < f_c - f_5 < 30.73
+    -23.88 < f_c - f_6 < 82.23
+    -15.29 < f_c - f_8 < 37.83
+    -17.73 < f_c - f_9 < 27.58
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -23.88
+layer 0 2 neurons never activated, 3 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 1.10000
+    -4.83 < f_c - f_0 < 22.89
+    3.44 < f_c - f_1 < 27.88
+    -4.68 < f_c - f_2 < 21.03
+    -8.46 < f_c - f_3 < 17.39
+    -0.34 < f_c - f_4 < 31.30
+    -6.43 < f_c - f_5 < 21.24
+    -3.55 < f_c - f_6 < 53.90
+    -2.26 < f_c - f_8 < 26.56
+    -6.38 < f_c - f_9 < 18.35
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -8.46
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.65000
+    0.82 < f_c - f_0 < 16.90
+    9.36 < f_c - f_1 < 23.22
+    1.14 < f_c - f_2 < 16.11
+    -0.92 < f_c - f_3 < 12.26
+    6.90 < f_c - f_4 < 24.75
+    0.19 < f_c - f_5 < 16.46
+    6.70 < f_c - f_6 < 39.44
+    4.00 < f_c - f_8 < 20.76
+    -1.24 < f_c - f_9 < 13.68
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -1.24
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.42500
+    3.79 < f_c - f_0 < 14.03
+    12.42 < f_c - f_1 < 21.01
+    3.98 < f_c - f_2 < 13.53
+    2.70 < f_c - f_3 < 10.51
+    10.45 < f_c - f_4 < 21.51
+    3.69 < f_c - f_5 < 14.07
+    11.74 < f_c - f_6 < 32.39
+    7.38 < f_c - f_8 < 17.99
+    1.72 < f_c - f_9 < 11.41
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = 1.72
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.53750
+    2.28 < f_c - f_0 < 15.46
+    10.87 < f_c - f_1 < 22.11
+    2.56 < f_c - f_2 < 14.84
+    0.92 < f_c - f_3 < 11.35
+    8.64 < f_c - f_4 < 23.12
+    1.90 < f_c - f_5 < 15.27
+    9.19 < f_c - f_6 < 35.90
+    5.65 < f_c - f_8 < 19.37
+    0.18 < f_c - f_9 < 12.55
+[L2][binary search] step = 5, eps = 0.53750, gap_gx = 0.18
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.59375
+    1.55 < f_c - f_0 < 16.18
+    10.11 < f_c - f_1 < 22.66
+    1.85 < f_c - f_2 < 15.48
+    0.00 < f_c - f_3 < 11.80
+    7.77 < f_c - f_4 < 23.93
+    1.04 < f_c - f_5 < 15.87
+    7.95 < f_c - f_6 < 37.67
+    4.82 < f_c - f_8 < 20.06
+    -0.54 < f_c - f_9 < 13.11
+[L2][binary search] step = 6, eps = 0.59375, gap_gx = -0.54
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.56563
+    1.91 < f_c - f_0 < 15.82
+    10.49 < f_c - f_1 < 22.38
+    2.21 < f_c - f_2 < 15.16
+    0.46 < f_c - f_3 < 11.57
+    8.20 < f_c - f_4 < 23.53
+    1.47 < f_c - f_5 < 15.57
+    8.57 < f_c - f_6 < 36.79
+    5.23 < f_c - f_8 < 19.72
+    -0.18 < f_c - f_9 < 12.83
+[L2][binary search] step = 7, eps = 0.56563, gap_gx = -0.18
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.55156
+    2.10 < f_c - f_0 < 15.64
+    10.68 < f_c - f_1 < 22.25
+    2.38 < f_c - f_2 < 15.00
+    0.69 < f_c - f_3 < 11.46
+    8.42 < f_c - f_4 < 23.33
+    1.68 < f_c - f_5 < 15.42
+    8.88 < f_c - f_6 < 36.35
+    5.43 < f_c - f_8 < 19.55
+    -0.00 < f_c - f_9 < 12.69
+[L2][binary search] step = 8, eps = 0.55156, gap_gx = -0.00
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.54453
+    2.19 < f_c - f_0 < 15.55
+    10.77 < f_c - f_1 < 22.18
+    2.47 < f_c - f_2 < 14.92
+    0.80 < f_c - f_3 < 11.41
+    8.53 < f_c - f_4 < 23.22
+    1.79 < f_c - f_5 < 15.35
+    9.04 < f_c - f_6 < 36.13
+    5.54 < f_c - f_8 < 19.46
+    0.09 < f_c - f_9 < 12.62
+[L2][binary search] step = 9, eps = 0.54453, gap_gx = 0.09
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.54805
+    2.14 < f_c - f_0 < 15.60
+    10.73 < f_c - f_1 < 22.21
+    2.43 < f_c - f_2 < 14.96
+    0.74 < f_c - f_3 < 11.43
+    8.48 < f_c - f_4 < 23.27
+    1.74 < f_c - f_5 < 15.38
+    8.96 < f_c - f_6 < 36.24
+    5.49 < f_c - f_8 < 19.50
+    0.04 < f_c - f_9 < 12.66
+[L2][binary search] step = 10, eps = 0.54805, gap_gx = 0.04
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.54980
+    2.12 < f_c - f_0 < 15.62
+    10.70 < f_c - f_1 < 22.23
+    2.40 < f_c - f_2 < 14.98
+    0.72 < f_c - f_3 < 11.45
+    8.45 < f_c - f_4 < 23.30
+    1.71 < f_c - f_5 < 15.40
+    8.92 < f_c - f_6 < 36.29
+    5.46 < f_c - f_8 < 19.53
+    0.02 < f_c - f_9 < 12.67
+[L2][binary search] step = 11, eps = 0.54980, gap_gx = 0.02
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.55068
+    2.11 < f_c - f_0 < 15.63
+    10.69 < f_c - f_1 < 22.24
+    2.39 < f_c - f_2 < 14.99
+    0.70 < f_c - f_3 < 11.45
+    8.44 < f_c - f_4 < 23.31
+    1.70 < f_c - f_5 < 15.41
+    8.90 < f_c - f_6 < 36.32
+    5.45 < f_c - f_8 < 19.54
+    0.01 < f_c - f_9 < 12.68
+[L2][binary search] step = 12, eps = 0.55068, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 0, id = 0, true_class = 7, target_class = 7 robustness_gx = 0.55068, avg_robustness_gx = 0.55068, time = 0.0095, total_time = 0.0095
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.20000
+    -1.48 < f_c - f_0 < 2.10
+    3.60 < f_c - f_1 < 7.74
+    -0.65 < f_c - f_3 < 3.68
+    16.94 < f_c - f_4 < 22.33
+    -1.75 < f_c - f_5 < 2.68
+    1.08 < f_c - f_6 < 7.33
+    15.98 < f_c - f_7 < 19.96
+    0.78 < f_c - f_8 < 4.49
+    14.86 < f_c - f_9 < 20.56
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = -1.75
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.10000
+    -0.59 < f_c - f_0 < 0.94
+    4.83 < f_c - f_1 < 6.57
+    0.63 < f_c - f_3 < 2.31
+    18.85 < f_c - f_4 < 20.89
+    -0.21 < f_c - f_5 < 1.44
+    2.71 < f_c - f_6 < 4.95
+    17.16 < f_c - f_7 < 18.96
+    1.79 < f_c - f_8 < 3.30
+    16.62 < f_c - f_9 < 18.95
+[L2][binary search] step = 1, eps = 0.10000, gap_gx = -0.59
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.05000
+    -0.29 < f_c - f_0 < 0.46
+    5.29 < f_c - f_1 < 6.03
+    1.19 < f_c - f_3 < 1.75
+    19.43 < f_c - f_4 < 20.26
+    0.30 < f_c - f_5 < 0.88
+    3.30 < f_c - f_6 < 3.99
+    17.68 < f_c - f_7 < 18.46
+    2.08 < f_c - f_8 < 2.82
+    17.25 < f_c - f_9 < 18.22
+[L2][binary search] step = 2, eps = 0.05000, gap_gx = -0.29
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.02500
+    -0.15 < f_c - f_0 < 0.25
+    5.44 < f_c - f_1 < 5.81
+    1.28 < f_c - f_3 < 1.58
+    19.60 < f_c - f_4 < 20.02
+    0.40 < f_c - f_5 < 0.71
+    3.42 < f_c - f_6 < 3.78
+    17.86 < f_c - f_7 < 18.25
+    2.20 < f_c - f_8 < 2.60
+    17.43 < f_c - f_9 < 17.94
+[L2][binary search] step = 3, eps = 0.02500, gap_gx = -0.15
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.01250
+    -0.07 < f_c - f_0 < 0.14
+    5.52 < f_c - f_1 < 5.71
+    1.34 < f_c - f_3 < 1.50
+    19.69 < f_c - f_4 < 19.91
+    0.46 < f_c - f_5 < 0.63
+    3.49 < f_c - f_6 < 3.68
+    17.95 < f_c - f_7 < 18.14
+    2.28 < f_c - f_8 < 2.49
+    17.53 < f_c - f_9 < 17.80
+[L2][binary search] step = 4, eps = 0.01250, gap_gx = -0.07
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.00625
+    -0.02 < f_c - f_0 < 0.09
+    5.57 < f_c - f_1 < 5.66
+    1.38 < f_c - f_3 < 1.46
+    19.74 < f_c - f_4 < 19.85
+    0.50 < f_c - f_5 < 0.59
+    3.54 < f_c - f_6 < 3.64
+    18.00 < f_c - f_7 < 18.10
+    2.33 < f_c - f_8 < 2.44
+    17.60 < f_c - f_9 < 17.73
+[L2][binary search] step = 5, eps = 0.00625, gap_gx = -0.02
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.00313
+    0.01 < f_c - f_0 < 0.06
+    5.59 < f_c - f_1 < 5.64
+    1.40 < f_c - f_3 < 1.44
+    19.77 < f_c - f_4 < 19.82
+    0.52 < f_c - f_5 < 0.56
+    3.56 < f_c - f_6 < 3.61
+    18.02 < f_c - f_7 < 18.07
+    2.36 < f_c - f_8 < 2.41
+    17.63 < f_c - f_9 < 17.70
+[L2][binary search] step = 6, eps = 0.00313, gap_gx = 0.01
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.00469
+    -0.00 < f_c - f_0 < 0.07
+    5.58 < f_c - f_1 < 5.65
+    1.39 < f_c - f_3 < 1.45
+    19.76 < f_c - f_4 < 19.84
+    0.51 < f_c - f_5 < 0.57
+    3.55 < f_c - f_6 < 3.62
+    18.01 < f_c - f_7 < 18.08
+    2.34 < f_c - f_8 < 2.42
+    17.61 < f_c - f_9 < 17.71
+[L2][binary search] step = 7, eps = 0.00469, gap_gx = -0.00
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.00391
+    0.00 < f_c - f_0 < 0.07
+    5.58 < f_c - f_1 < 5.64
+    1.40 < f_c - f_3 < 1.45
+    19.76 < f_c - f_4 < 19.83
+    0.52 < f_c - f_5 < 0.57
+    3.56 < f_c - f_6 < 3.62
+    18.02 < f_c - f_7 < 18.08
+    2.35 < f_c - f_8 < 2.42
+    17.62 < f_c - f_9 < 17.70
+[L2][binary search] step = 8, eps = 0.00391, gap_gx = 0.00
+[L1] model = models/mnist_2layer_relu_20, seq = 1, id = 1, true_class = 2, target_class = 2 robustness_gx = 0.00391, avg_robustness_gx = 0.27729, time = 0.0065, total_time = 0.0161
+layer 0 2 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.20000
+    10.36 < f_c - f_0 < 14.17
+    3.84 < f_c - f_2 < 9.03
+    3.46 < f_c - f_3 < 7.85
+    4.67 < f_c - f_4 < 8.90
+    6.62 < f_c - f_5 < 9.57
+    9.49 < f_c - f_6 < 19.73
+    3.62 < f_c - f_7 < 7.32
+    5.64 < f_c - f_8 < 8.39
+    6.18 < f_c - f_9 < 10.00
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 3.46
+layer 0 2 neurons never activated, 1 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 0 neurons always activated
+epsilon = 2.00000
+    -11.77 < f_c - f_0 < 32.00
+    -24.11 < f_c - f_2 < 28.68
+    -24.26 < f_c - f_3 < 22.65
+    -21.86 < f_c - f_4 < 27.49
+    -18.07 < f_c - f_5 < 20.55
+    -25.33 < f_c - f_6 < 68.87
+    -21.34 < f_c - f_7 < 23.38
+    -11.99 < f_c - f_8 < 21.75
+    -20.52 < f_c - f_9 < 26.43
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -25.33
+layer 0 2 neurons never activated, 2 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 1.10000
+    -0.34 < f_c - f_0 < 22.35
+    -11.57 < f_c - f_2 < 19.55
+    -11.43 < f_c - f_3 < 15.66
+    -8.58 < f_c - f_4 < 19.35
+    -4.87 < f_c - f_5 < 15.98
+    -10.86 < f_c - f_6 < 44.41
+    -9.52 < f_c - f_7 < 15.30
+    -3.56 < f_c - f_8 < 15.11
+    -7.63 < f_c - f_9 < 18.82
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -11.57
+layer 0 2 neurons never activated, 3 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.65000
+    4.83 < f_c - f_0 < 18.13
+    -4.30 < f_c - f_2 < 14.55
+    -4.37 < f_c - f_3 < 11.69
+    -1.34 < f_c - f_4 < 14.73
+    1.41 < f_c - f_5 < 13.09
+    -1.66 < f_c - f_6 < 32.13
+    -2.71 < f_c - f_7 < 11.20
+    1.02 < f_c - f_8 < 11.71
+    -0.34 < f_c - f_9 < 14.56
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -4.37
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.42500
+    7.50 < f_c - f_0 < 16.18
+    -0.17 < f_c - f_2 < 11.75
+    -0.23 < f_c - f_3 < 9.71
+    1.90 < f_c - f_4 < 11.91
+    4.24 < f_c - f_5 < 11.41
+    3.68 < f_c - f_6 < 25.72
+    0.74 < f_c - f_7 < 9.09
+    3.41 < f_c - f_8 < 9.97
+    3.20 < f_c - f_9 < 12.24
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = -0.23
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.31250
+    8.89 < f_c - f_0 < 15.19
+    1.87 < f_c - f_2 < 10.37
+    1.69 < f_c - f_3 < 8.80
+    3.36 < f_c - f_4 < 10.41
+    5.50 < f_c - f_5 < 10.51
+    6.41 < f_c - f_6 < 22.72
+    2.20 < f_c - f_7 < 8.21
+    4.54 < f_c - f_8 < 9.16
+    4.77 < f_c - f_9 < 11.12
+[L2][binary search] step = 5, eps = 0.31250, gap_gx = 1.69
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.36875
+    8.18 < f_c - f_0 < 15.69
+    0.83 < f_c - f_2 < 11.07
+    0.73 < f_c - f_3 < 9.28
+    2.62 < f_c - f_4 < 11.18
+    4.87 < f_c - f_5 < 10.98
+    4.99 < f_c - f_6 < 24.23
+    1.47 < f_c - f_7 < 8.66
+    3.97 < f_c - f_8 < 9.57
+    3.99 < f_c - f_9 < 11.70
+[L2][binary search] step = 6, eps = 0.36875, gap_gx = 0.73
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.39688
+    7.83 < f_c - f_0 < 15.94
+    0.33 < f_c - f_2 < 11.41
+    0.25 < f_c - f_3 < 9.50
+    2.26 < f_c - f_4 < 11.55
+    4.55 < f_c - f_5 < 11.20
+    4.32 < f_c - f_6 < 24.98
+    1.10 < f_c - f_7 < 8.88
+    3.69 < f_c - f_8 < 9.77
+    3.59 < f_c - f_9 < 11.97
+[L2][binary search] step = 7, eps = 0.39688, gap_gx = 0.25
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.41094
+    7.67 < f_c - f_0 < 16.06
+    0.08 < f_c - f_2 < 11.58
+    0.01 < f_c - f_3 < 9.60
+    2.08 < f_c - f_4 < 11.73
+    4.39 < f_c - f_5 < 11.31
+    4.00 < f_c - f_6 < 25.35
+    0.92 < f_c - f_7 < 8.98
+    3.55 < f_c - f_8 < 9.87
+    3.40 < f_c - f_9 < 12.11
+[L2][binary search] step = 8, eps = 0.41094, gap_gx = 0.01
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.41797
+    7.58 < f_c - f_0 < 16.12
+    -0.05 < f_c - f_2 < 11.67
+    -0.11 < f_c - f_3 < 9.66
+    1.99 < f_c - f_4 < 11.82
+    4.31 < f_c - f_5 < 11.36
+    3.84 < f_c - f_6 < 25.53
+    0.83 < f_c - f_7 < 9.04
+    3.48 < f_c - f_8 < 9.92
+    3.30 < f_c - f_9 < 12.17
+[L2][binary search] step = 9, eps = 0.41797, gap_gx = -0.11
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.41445
+    7.62 < f_c - f_0 < 16.09
+    0.02 < f_c - f_2 < 11.63
+    -0.05 < f_c - f_3 < 9.63
+    2.03 < f_c - f_4 < 11.77
+    4.35 < f_c - f_5 < 11.33
+    3.92 < f_c - f_6 < 25.44
+    0.87 < f_c - f_7 < 9.01
+    3.52 < f_c - f_8 < 9.89
+    3.35 < f_c - f_9 < 12.14
+[L2][binary search] step = 10, eps = 0.41445, gap_gx = -0.05
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.41270
+    7.65 < f_c - f_0 < 16.08
+    0.05 < f_c - f_2 < 11.61
+    -0.02 < f_c - f_3 < 9.62
+    2.06 < f_c - f_4 < 11.75
+    4.37 < f_c - f_5 < 11.32
+    3.96 < f_c - f_6 < 25.39
+    0.90 < f_c - f_7 < 9.00
+    3.53 < f_c - f_8 < 9.88
+    3.37 < f_c - f_9 < 12.12
+[L2][binary search] step = 11, eps = 0.41270, gap_gx = -0.02
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.41182
+    7.66 < f_c - f_0 < 16.07
+    0.06 < f_c - f_2 < 11.59
+    -0.00 < f_c - f_3 < 9.61
+    2.07 < f_c - f_4 < 11.74
+    4.38 < f_c - f_5 < 11.31
+    3.98 < f_c - f_6 < 25.37
+    0.91 < f_c - f_7 < 8.99
+    3.54 < f_c - f_8 < 9.87
+    3.38 < f_c - f_9 < 12.11
+[L2][binary search] step = 12, eps = 0.41182, gap_gx = -0.00
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.41138
+    7.66 < f_c - f_0 < 16.06
+    0.07 < f_c - f_2 < 11.59
+    0.01 < f_c - f_3 < 9.61
+    2.07 < f_c - f_4 < 11.74
+    4.39 < f_c - f_5 < 11.31
+    3.99 < f_c - f_6 < 25.36
+    0.91 < f_c - f_7 < 8.99
+    3.55 < f_c - f_8 < 9.87
+    3.39 < f_c - f_9 < 12.11
+[L2][binary search] step = 13, eps = 0.41138, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 2, id = 2, true_class = 1, target_class = 1 robustness_gx = 0.41138, avg_robustness_gx = 0.32199, time = 0.0113, total_time = 0.0274
+layer 0 5 neurons never activated, 4 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    22.08 < f_c - f_1 < 24.55
+    8.67 < f_c - f_2 < 9.60
+    11.03 < f_c - f_3 < 12.29
+    16.61 < f_c - f_4 < 19.49
+    7.47 < f_c - f_5 < 8.49
+    8.69 < f_c - f_6 < 10.72
+    9.06 < f_c - f_7 < 11.67
+    8.45 < f_c - f_8 < 9.23
+    9.86 < f_c - f_9 < 11.58
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 7.47
+layer 0 2 neurons never activated, 3 neurons always activated
+layer 1 40 neurons never activated, 5 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 2.00000
+    -1.61 < f_c - f_1 < 39.52
+    -12.18 < f_c - f_2 < 19.15
+    -20.39 < f_c - f_3 < 28.77
+    -15.95 < f_c - f_4 < 41.93
+    -16.44 < f_c - f_5 < 21.37
+    -11.41 < f_c - f_6 < 40.67
+    -17.22 < f_c - f_7 < 27.92
+    -5.69 < f_c - f_8 < 18.43
+    -16.00 < f_c - f_9 < 28.52
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -20.39
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.10000
+    12.66 < f_c - f_1 < 31.50
+    1.33 < f_c - f_2 < 13.51
+    -1.09 < f_c - f_3 < 19.60
+    4.56 < f_c - f_4 < 29.52
+    -0.77 < f_c - f_5 < 14.10
+    -0.82 < f_c - f_6 < 21.70
+    -0.88 < f_c - f_7 < 19.26
+    2.84 < f_c - f_8 < 12.84
+    0.33 < f_c - f_9 < 18.70
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -1.09
+layer 0 3 neurons never activated, 4 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.65000
+    18.25 < f_c - f_1 < 27.50
+    6.31 < f_c - f_2 < 11.13
+    7.24 < f_c - f_3 < 14.76
+    11.69 < f_c - f_4 < 23.61
+    4.90 < f_c - f_5 < 10.16
+    5.22 < f_c - f_6 < 14.08
+    5.45 < f_c - f_7 < 14.86
+    6.16 < f_c - f_8 < 10.51
+    6.57 < f_c - f_9 < 13.90
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = 4.90
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.87500
+    15.64 < f_c - f_1 < 29.46
+    4.31 < f_c - f_2 < 12.18
+    3.49 < f_c - f_3 < 17.08
+    8.33 < f_c - f_4 < 26.54
+    2.41 < f_c - f_5 < 11.99
+    2.32 < f_c - f_6 < 17.44
+    2.68 < f_c - f_7 < 17.00
+    4.61 < f_c - f_8 < 11.53
+    3.79 < f_c - f_9 < 16.05
+[L2][binary search] step = 4, eps = 0.87500, gap_gx = 2.32
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.98750
+    14.16 < f_c - f_1 < 30.50
+    2.94 < f_c - f_2 < 12.81
+    1.23 < f_c - f_3 < 18.36
+    6.46 < f_c - f_4 < 28.05
+    0.84 < f_c - f_5 < 13.06
+    0.72 < f_c - f_6 < 19.54
+    0.97 < f_c - f_7 < 18.14
+    3.73 < f_c - f_8 < 12.17
+    2.09 < f_c - f_9 < 17.35
+[L2][binary search] step = 5, eps = 0.98750, gap_gx = 0.72
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.04375
+    13.41 < f_c - f_1 < 31.01
+    2.14 < f_c - f_2 < 13.16
+    0.07 < f_c - f_3 < 18.99
+    5.51 < f_c - f_4 < 28.79
+    0.04 < f_c - f_5 < 13.59
+    -0.06 < f_c - f_6 < 20.62
+    0.05 < f_c - f_7 < 18.71
+    3.29 < f_c - f_8 < 12.51
+    1.21 < f_c - f_9 < 18.03
+[L2][binary search] step = 6, eps = 1.04375, gap_gx = -0.06
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.01562
+    13.78 < f_c - f_1 < 30.75
+    2.54 < f_c - f_2 < 12.99
+    0.65 < f_c - f_3 < 18.68
+    5.99 < f_c - f_4 < 28.42
+    0.44 < f_c - f_5 < 13.33
+    0.33 < f_c - f_6 < 20.07
+    0.51 < f_c - f_7 < 18.43
+    3.51 < f_c - f_8 < 12.34
+    1.65 < f_c - f_9 < 17.69
+[L2][binary search] step = 7, eps = 1.01562, gap_gx = 0.33
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.02969
+    13.60 < f_c - f_1 < 30.88
+    2.34 < f_c - f_2 < 13.08
+    0.36 < f_c - f_3 < 18.83
+    5.75 < f_c - f_4 < 28.61
+    0.24 < f_c - f_5 < 13.46
+    0.14 < f_c - f_6 < 20.34
+    0.28 < f_c - f_7 < 18.57
+    3.40 < f_c - f_8 < 12.42
+    1.43 < f_c - f_9 < 17.86
+[L2][binary search] step = 8, eps = 1.02969, gap_gx = 0.14
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.03672
+    13.50 < f_c - f_1 < 30.94
+    2.24 < f_c - f_2 < 13.12
+    0.22 < f_c - f_3 < 18.91
+    5.63 < f_c - f_4 < 28.70
+    0.14 < f_c - f_5 < 13.52
+    0.04 < f_c - f_6 < 20.48
+    0.16 < f_c - f_7 < 18.64
+    3.34 < f_c - f_8 < 12.46
+    1.32 < f_c - f_9 < 17.94
+[L2][binary search] step = 9, eps = 1.03672, gap_gx = 0.04
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.04023
+    13.46 < f_c - f_1 < 30.97
+    2.19 < f_c - f_2 < 13.14
+    0.15 < f_c - f_3 < 18.95
+    5.57 < f_c - f_4 < 28.74
+    0.09 < f_c - f_5 < 13.55
+    -0.01 < f_c - f_6 < 20.55
+    0.10 < f_c - f_7 < 18.67
+    3.31 < f_c - f_8 < 12.49
+    1.27 < f_c - f_9 < 17.99
+[L2][binary search] step = 10, eps = 1.04023, gap_gx = -0.01
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.03848
+    13.48 < f_c - f_1 < 30.96
+    2.21 < f_c - f_2 < 13.13
+    0.18 < f_c - f_3 < 18.93
+    5.60 < f_c - f_4 < 28.72
+    0.11 < f_c - f_5 < 13.54
+    0.02 < f_c - f_6 < 20.51
+    0.13 < f_c - f_7 < 18.66
+    3.33 < f_c - f_8 < 12.48
+    1.30 < f_c - f_9 < 17.97
+[L2][binary search] step = 11, eps = 1.03848, gap_gx = 0.02
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.03936
+    13.47 < f_c - f_1 < 30.97
+    2.20 < f_c - f_2 < 13.14
+    0.16 < f_c - f_3 < 18.94
+    5.59 < f_c - f_4 < 28.73
+    0.10 < f_c - f_5 < 13.55
+    0.00 < f_c - f_6 < 20.53
+    0.12 < f_c - f_7 < 18.67
+    3.32 < f_c - f_8 < 12.48
+    1.28 < f_c - f_9 < 17.98
+[L2][binary search] step = 12, eps = 1.03936, gap_gx = 0.00
+[L1] model = models/mnist_2layer_relu_20, seq = 3, id = 3, true_class = 0, target_class = 0 robustness_gx = 1.03936, avg_robustness_gx = 0.50133, time = 0.0132, total_time = 0.0407
+layer 0 4 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 4 neurons always activated
+epsilon = 0.20000
+    6.65 < f_c - f_0 < 9.98
+    13.58 < f_c - f_1 < 16.92
+    6.51 < f_c - f_2 < 8.96
+    7.71 < f_c - f_3 < 11.09
+    3.81 < f_c - f_5 < 6.50
+    7.77 < f_c - f_6 < 10.53
+    5.11 < f_c - f_7 < 8.34
+    7.05 < f_c - f_8 < 10.02
+    2.11 < f_c - f_9 < 4.31
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 2.11
+layer 0 3 neurons never activated, 2 neurons always activated
+layer 1 40 neurons never activated, 5 neurons always activated
+layer 2 2 neurons never activated, 2 neurons always activated
+epsilon = 2.00000
+    -20.12 < f_c - f_0 < 22.23
+    -12.90 < f_c - f_1 < 31.68
+    -29.83 < f_c - f_2 < 24.90
+    -24.74 < f_c - f_3 < 28.98
+    -16.41 < f_c - f_5 < 16.91
+    -12.51 < f_c - f_6 < 23.04
+    -25.44 < f_c - f_7 < 25.49
+    -16.79 < f_c - f_8 < 23.36
+    -12.67 < f_c - f_9 < 15.91
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -29.83
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 7 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 1.10000
+    -6.28 < f_c - f_0 < 15.67
+    0.22 < f_c - f_1 < 23.47
+    -11.84 < f_c - f_2 < 16.86
+    -9.72 < f_c - f_3 < 19.54
+    -6.16 < f_c - f_5 < 11.12
+    -1.95 < f_c - f_6 < 16.23
+    -9.62 < f_c - f_7 < 16.41
+    -4.98 < f_c - f_8 < 16.04
+    -5.49 < f_c - f_9 < 9.70
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -11.84
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 0.65000
+    0.57 < f_c - f_0 < 13.01
+    7.06 < f_c - f_1 < 20.36
+    -1.47 < f_c - f_2 < 12.89
+    -0.43 < f_c - f_3 < 15.44
+    -1.08 < f_c - f_5 < 8.90
+    3.08 < f_c - f_6 < 13.29
+    -1.35 < f_c - f_7 < 12.50
+    1.10 < f_c - f_8 < 12.94
+    -1.70 < f_c - f_9 < 6.97
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -1.70
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.42500
+    3.76 < f_c - f_0 < 11.57
+    10.45 < f_c - f_1 < 18.72
+    3.52 < f_c - f_2 < 10.66
+    4.02 < f_c - f_3 < 13.30
+    1.41 < f_c - f_5 < 7.76
+    5.44 < f_c - f_6 < 11.93
+    2.52 < f_c - f_7 < 10.33
+    4.15 < f_c - f_8 < 11.42
+    0.25 < f_c - f_9 < 5.55
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = 0.25
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 0.53750
+    2.19 < f_c - f_0 < 12.30
+    8.76 < f_c - f_1 < 19.56
+    1.04 < f_c - f_2 < 11.84
+    1.81 < f_c - f_3 < 14.40
+    0.17 < f_c - f_5 < 8.34
+    4.25 < f_c - f_6 < 12.62
+    0.63 < f_c - f_7 < 11.45
+    2.62 < f_c - f_8 < 12.17
+    -0.74 < f_c - f_9 < 6.26
+[L2][binary search] step = 5, eps = 0.53750, gap_gx = -0.74
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.48125
+    2.99 < f_c - f_0 < 11.93
+    9.61 < f_c - f_1 < 19.14
+    2.29 < f_c - f_2 < 11.27
+    2.92 < f_c - f_3 < 13.86
+    0.79 < f_c - f_5 < 8.06
+    4.84 < f_c - f_6 < 12.28
+    1.59 < f_c - f_7 < 10.89
+    3.39 < f_c - f_8 < 11.79
+    -0.25 < f_c - f_9 < 5.91
+[L2][binary search] step = 6, eps = 0.48125, gap_gx = -0.25
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.45313
+    3.37 < f_c - f_0 < 11.75
+    10.03 < f_c - f_1 < 18.93
+    2.91 < f_c - f_2 < 10.97
+    3.48 < f_c - f_3 < 13.58
+    1.10 < f_c - f_5 < 7.91
+    5.14 < f_c - f_6 < 12.10
+    2.06 < f_c - f_7 < 10.61
+    3.77 < f_c - f_8 < 11.60
+    -0.01 < f_c - f_9 < 5.73
+[L2][binary search] step = 7, eps = 0.45313, gap_gx = -0.01
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.43906
+    3.56 < f_c - f_0 < 11.66
+    10.24 < f_c - f_1 < 18.82
+    3.22 < f_c - f_2 < 10.82
+    3.75 < f_c - f_3 < 13.44
+    1.26 < f_c - f_5 < 7.84
+    5.29 < f_c - f_6 < 12.02
+    2.29 < f_c - f_7 < 10.47
+    3.96 < f_c - f_8 < 11.51
+    0.12 < f_c - f_9 < 5.64
+[L2][binary search] step = 8, eps = 0.43906, gap_gx = 0.12
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.44609
+    3.47 < f_c - f_0 < 11.70
+    10.14 < f_c - f_1 < 18.88
+    3.06 < f_c - f_2 < 10.90
+    3.61 < f_c - f_3 < 13.51
+    1.18 < f_c - f_5 < 7.88
+    5.21 < f_c - f_6 < 12.06
+    2.17 < f_c - f_7 < 10.54
+    3.86 < f_c - f_8 < 11.56
+    0.06 < f_c - f_9 < 5.68
+[L2][binary search] step = 9, eps = 0.44609, gap_gx = 0.06
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.44961
+    3.42 < f_c - f_0 < 11.73
+    10.08 < f_c - f_1 < 18.90
+    2.98 < f_c - f_2 < 10.94
+    3.54 < f_c - f_3 < 13.55
+    1.14 < f_c - f_5 < 7.89
+    5.18 < f_c - f_6 < 12.08
+    2.12 < f_c - f_7 < 10.58
+    3.82 < f_c - f_8 < 11.58
+    0.03 < f_c - f_9 < 5.70
+[L2][binary search] step = 10, eps = 0.44961, gap_gx = 0.03
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.45137
+    3.40 < f_c - f_0 < 11.74
+    10.06 < f_c - f_1 < 18.92
+    2.95 < f_c - f_2 < 10.96
+    3.51 < f_c - f_3 < 13.57
+    1.12 < f_c - f_5 < 7.90
+    5.16 < f_c - f_6 < 12.09
+    2.09 < f_c - f_7 < 10.60
+    3.79 < f_c - f_8 < 11.59
+    0.01 < f_c - f_9 < 5.72
+[L2][binary search] step = 11, eps = 0.45137, gap_gx = 0.01
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 0.45225
+    3.38 < f_c - f_0 < 11.74
+    10.04 < f_c - f_1 < 18.92
+    2.93 < f_c - f_2 < 10.96
+    3.49 < f_c - f_3 < 13.58
+    1.11 < f_c - f_5 < 7.91
+    5.15 < f_c - f_6 < 12.10
+    2.07 < f_c - f_7 < 10.60
+    3.78 < f_c - f_8 < 11.60
+    0.00 < f_c - f_9 < 5.72
+[L2][binary search] step = 12, eps = 0.45225, gap_gx = 0.00
+[L1] model = models/mnist_2layer_relu_20, seq = 4, id = 4, true_class = 4, target_class = 4 robustness_gx = 0.45225, avg_robustness_gx = 0.49151, time = 0.0131, total_time = 0.0539
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    12.42 < f_c - f_0 < 15.68
+    6.13 < f_c - f_2 < 11.00
+    3.23 < f_c - f_3 < 7.35
+    5.54 < f_c - f_4 < 9.41
+    7.64 < f_c - f_5 < 10.42
+    14.77 < f_c - f_6 < 24.62
+    3.35 < f_c - f_7 < 6.83
+    6.19 < f_c - f_8 < 8.49
+    5.28 < f_c - f_9 < 8.87
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 3.23
+layer 0 2 neurons never activated, 1 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -9.48 < f_c - f_0 < 32.83
+    -22.08 < f_c - f_2 < 29.71
+    -24.18 < f_c - f_3 < 22.72
+    -20.78 < f_c - f_4 < 27.79
+    -16.33 < f_c - f_5 < 21.48
+    -22.85 < f_c - f_6 < 72.58
+    -20.76 < f_c - f_7 < 23.26
+    -11.49 < f_c - f_8 < 21.78
+    -20.62 < f_c - f_9 < 26.04
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -24.18
+layer 0 2 neurons never activated, 2 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 3 neurons never activated, 1 neurons always activated
+epsilon = 1.10000
+    1.77 < f_c - f_0 < 23.41
+    -9.35 < f_c - f_2 < 20.88
+    -11.44 < f_c - f_3 < 15.47
+    -7.75 < f_c - f_4 < 19.47
+    -3.30 < f_c - f_5 < 16.75
+    -7.30 < f_c - f_6 < 48.76
+    -9.27 < f_c - f_7 < 15.00
+    -2.78 < f_c - f_8 < 15.24
+    -7.85 < f_c - f_9 < 18.03
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -11.44
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.65000
+    6.93 < f_c - f_0 < 19.53
+    -1.89 < f_c - f_2 < 16.13
+    -4.34 < f_c - f_3 < 11.21
+    -0.61 < f_c - f_4 < 14.65
+    2.70 < f_c - f_5 < 13.77
+    3.19 < f_c - f_6 < 36.54
+    -2.60 < f_c - f_7 < 10.86
+    1.80 < f_c - f_8 < 11.86
+    -0.87 < f_c - f_9 < 13.53
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -4.34
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.42500
+    9.68 < f_c - f_0 < 17.56
+    2.25 < f_c - f_2 < 13.44
+    -0.32 < f_c - f_3 < 9.24
+    2.76 < f_c - f_4 < 11.83
+    5.36 < f_c - f_5 < 12.11
+    8.73 < f_c - f_6 < 30.40
+    0.72 < f_c - f_7 < 8.67
+    4.17 < f_c - f_8 < 10.06
+    2.51 < f_c - f_9 < 11.13
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = -0.32
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.31250
+    11.09 < f_c - f_0 < 16.61
+    4.25 < f_c - f_2 < 12.19
+    1.50 < f_c - f_3 < 8.29
+    4.21 < f_c - f_4 < 10.58
+    6.53 < f_c - f_5 < 11.27
+    11.76 < f_c - f_6 < 27.50
+    2.08 < f_c - f_7 < 7.74
+    5.23 < f_c - f_8 < 9.25
+    3.95 < f_c - f_9 < 9.99
+[L2][binary search] step = 5, eps = 0.31250, gap_gx = 1.50
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.36875
+    10.40 < f_c - f_0 < 17.08
+    3.28 < f_c - f_2 < 12.78
+    0.62 < f_c - f_3 < 8.75
+    3.52 < f_c - f_4 < 11.18
+    5.97 < f_c - f_5 < 11.68
+    10.23 < f_c - f_6 < 28.94
+    1.41 < f_c - f_7 < 8.20
+    4.72 < f_c - f_8 < 9.64
+    3.27 < f_c - f_9 < 10.54
+[L2][binary search] step = 6, eps = 0.36875, gap_gx = 0.62
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.39688
+    10.03 < f_c - f_0 < 17.32
+    2.76 < f_c - f_2 < 13.11
+    0.15 < f_c - f_3 < 9.00
+    3.14 < f_c - f_4 < 11.51
+    5.67 < f_c - f_5 < 11.90
+    9.46 < f_c - f_6 < 29.67
+    1.07 < f_c - f_7 < 8.44
+    4.44 < f_c - f_8 < 9.85
+    2.89 < f_c - f_9 < 10.84
+[L2][binary search] step = 7, eps = 0.39688, gap_gx = 0.15
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.41094
+    9.86 < f_c - f_0 < 17.44
+    2.50 < f_c - f_2 < 13.28
+    -0.09 < f_c - f_3 < 9.12
+    2.95 < f_c - f_4 < 11.67
+    5.51 < f_c - f_5 < 12.00
+    9.09 < f_c - f_6 < 30.04
+    0.89 < f_c - f_7 < 8.55
+    4.30 < f_c - f_8 < 9.95
+    2.70 < f_c - f_9 < 10.99
+[L2][binary search] step = 8, eps = 0.41094, gap_gx = -0.09
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.40391
+    9.94 < f_c - f_0 < 17.38
+    2.63 < f_c - f_2 < 13.19
+    0.03 < f_c - f_3 < 9.06
+    3.05 < f_c - f_4 < 11.59
+    5.59 < f_c - f_5 < 11.95
+    9.28 < f_c - f_6 < 29.85
+    0.98 < f_c - f_7 < 8.50
+    4.37 < f_c - f_8 < 9.90
+    2.80 < f_c - f_9 < 10.91
+[L2][binary search] step = 9, eps = 0.40391, gap_gx = 0.03
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.40742
+    9.90 < f_c - f_0 < 17.41
+    2.57 < f_c - f_2 < 13.24
+    -0.03 < f_c - f_3 < 9.09
+    3.00 < f_c - f_4 < 11.63
+    5.55 < f_c - f_5 < 11.98
+    9.18 < f_c - f_6 < 29.94
+    0.94 < f_c - f_7 < 8.52
+    4.34 < f_c - f_8 < 9.93
+    2.75 < f_c - f_9 < 10.95
+[L2][binary search] step = 10, eps = 0.40742, gap_gx = -0.03
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.40566
+    9.92 < f_c - f_0 < 17.40
+    2.60 < f_c - f_2 < 13.22
+    0.00 < f_c - f_3 < 9.08
+    3.02 < f_c - f_4 < 11.61
+    5.57 < f_c - f_5 < 11.96
+    9.23 < f_c - f_6 < 29.90
+    0.96 < f_c - f_7 < 8.51
+    4.36 < f_c - f_8 < 9.91
+    2.77 < f_c - f_9 < 10.93
+[L2][binary search] step = 11, eps = 0.40566, gap_gx = 0.00
+[L1] model = models/mnist_2layer_relu_20, seq = 5, id = 5, true_class = 1, target_class = 1 robustness_gx = 0.40566, avg_robustness_gx = 0.47721, time = 0.0117, total_time = 0.0657
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.20000
+    11.22 < f_c - f_0 < 16.56
+    10.62 < f_c - f_1 < 13.93
+    9.47 < f_c - f_2 < 13.83
+    9.24 < f_c - f_3 < 12.56
+    2.95 < f_c - f_5 < 5.85
+    12.92 < f_c - f_6 < 23.40
+    7.50 < f_c - f_7 < 10.86
+    7.91 < f_c - f_8 < 11.95
+    2.95 < f_c - f_9 < 5.20
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 2.95
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -22.93 < f_c - f_0 < 43.71
+    -16.37 < f_c - f_1 < 33.25
+    -27.58 < f_c - f_2 < 41.99
+    -26.67 < f_c - f_3 < 30.90
+    -17.79 < f_c - f_5 < 16.88
+    -25.12 < f_c - f_6 < 74.70
+    -22.76 < f_c - f_7 < 30.92
+    -20.51 < f_c - f_8 < 35.08
+    -13.83 < f_c - f_9 < 15.34
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -27.58
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 7 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 1.10000
+    -6.14 < f_c - f_0 < 29.76
+    -2.55 < f_c - f_1 < 22.95
+    -6.59 < f_c - f_2 < 26.63
+    -8.61 < f_c - f_3 < 22.03
+    -7.23 < f_c - f_5 < 11.67
+    -9.07 < f_c - f_6 < 48.74
+    -5.63 < f_c - f_7 < 19.57
+    -6.55 < f_c - f_8 < 22.83
+    -5.52 < f_c - f_9 < 9.72
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -9.07
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.65000
+    2.63 < f_c - f_0 < 23.35
+    4.24 < f_c - f_1 < 18.70
+    2.44 < f_c - f_2 < 19.72
+    1.03 < f_c - f_3 < 17.62
+    -1.95 < f_c - f_5 < 9.18
+    0.99 < f_c - f_6 < 36.03
+    1.58 < f_c - f_7 < 14.80
+    0.86 < f_c - f_8 < 17.59
+    -1.15 < f_c - f_9 < 7.58
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -1.95
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.42500
+    7.04 < f_c - f_0 < 19.87
+    7.73 < f_c - f_1 < 16.20
+    6.07 < f_c - f_2 < 16.66
+    5.53 < f_c - f_3 < 15.16
+    0.68 < f_c - f_5 < 7.59
+    6.60 < f_c - f_6 < 29.53
+    4.63 < f_c - f_7 < 12.78
+    4.60 < f_c - f_8 < 14.68
+    0.98 < f_c - f_9 < 6.49
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = 0.68
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.53750
+    4.81 < f_c - f_0 < 21.67
+    6.00 < f_c - f_1 < 17.51
+    4.23 < f_c - f_2 < 18.24
+    3.32 < f_c - f_3 < 16.45
+    -0.62 < f_c - f_5 < 8.44
+    3.69 < f_c - f_6 < 32.81
+    3.07 < f_c - f_7 < 13.79
+    2.73 < f_c - f_8 < 16.20
+    -0.08 < f_c - f_9 < 7.05
+[L2][binary search] step = 5, eps = 0.53750, gap_gx = -0.62
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 4 neurons always activated
+epsilon = 0.48125
+    5.94 < f_c - f_0 < 20.76
+    6.89 < f_c - f_1 < 16.85
+    5.16 < f_c - f_2 < 17.44
+    4.45 < f_c - f_3 < 15.80
+    0.05 < f_c - f_5 < 8.02
+    5.14 < f_c - f_6 < 31.15
+    3.85 < f_c - f_7 < 13.28
+    3.69 < f_c - f_8 < 15.44
+    0.46 < f_c - f_9 < 6.77
+[L2][binary search] step = 6, eps = 0.48125, gap_gx = 0.05
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.50938
+    5.37 < f_c - f_0 < 21.22
+    6.45 < f_c - f_1 < 17.18
+    4.69 < f_c - f_2 < 17.84
+    3.89 < f_c - f_3 < 16.13
+    -0.29 < f_c - f_5 < 8.24
+    4.41 < f_c - f_6 < 31.98
+    3.46 < f_c - f_7 < 13.53
+    3.21 < f_c - f_8 < 15.82
+    0.19 < f_c - f_9 < 6.91
+[L2][binary search] step = 7, eps = 0.50938, gap_gx = -0.29
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.49531
+    5.66 < f_c - f_0 < 20.99
+    6.67 < f_c - f_1 < 17.01
+    4.93 < f_c - f_2 < 17.63
+    4.18 < f_c - f_3 < 15.96
+    -0.12 < f_c - f_5 < 8.13
+    4.77 < f_c - f_6 < 31.56
+    3.65 < f_c - f_7 < 13.40
+    3.45 < f_c - f_8 < 15.63
+    0.33 < f_c - f_9 < 6.84
+[L2][binary search] step = 8, eps = 0.49531, gap_gx = -0.12
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 4 neurons always activated
+epsilon = 0.48828
+    5.80 < f_c - f_0 < 20.88
+    6.78 < f_c - f_1 < 16.93
+    5.05 < f_c - f_2 < 17.54
+    4.31 < f_c - f_3 < 15.88
+    -0.03 < f_c - f_5 < 8.07
+    4.95 < f_c - f_6 < 31.36
+    3.75 < f_c - f_7 < 13.34
+    3.57 < f_c - f_8 < 15.53
+    0.39 < f_c - f_9 < 6.81
+[L2][binary search] step = 9, eps = 0.48828, gap_gx = -0.03
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 4 neurons always activated
+epsilon = 0.48477
+    5.87 < f_c - f_0 < 20.82
+    6.84 < f_c - f_1 < 16.89
+    5.11 < f_c - f_2 < 17.49
+    4.38 < f_c - f_3 < 15.84
+    0.01 < f_c - f_5 < 8.04
+    5.04 < f_c - f_6 < 31.26
+    3.80 < f_c - f_7 < 13.31
+    3.63 < f_c - f_8 < 15.48
+    0.42 < f_c - f_9 < 6.79
+[L2][binary search] step = 10, eps = 0.48477, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 6, id = 6, true_class = 4, target_class = 4 robustness_gx = 0.48477, avg_robustness_gx = 0.47829, time = 0.0101, total_time = 0.0760
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    10.28 < f_c - f_0 < 15.17
+    3.66 < f_c - f_1 < 6.73
+    8.61 < f_c - f_2 < 12.99
+    3.25 < f_c - f_3 < 5.09
+    0.89 < f_c - f_4 < 3.15
+    3.27 < f_c - f_5 < 5.71
+    15.83 < f_c - f_6 < 26.68
+    3.15 < f_c - f_7 < 5.17
+    3.74 < f_c - f_8 < 7.26
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 0.89
+layer 0 2 neurons never activated, 1 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 0 neurons always activated
+epsilon = 2.00000
+    -18.69 < f_c - f_0 < 41.21
+    -19.59 < f_c - f_1 < 27.54
+    -29.15 < f_c - f_2 < 40.63
+    -19.87 < f_c - f_3 < 18.85
+    -13.95 < f_c - f_4 < 17.39
+    -15.17 < f_c - f_5 < 16.31
+    -27.85 < f_c - f_6 < 81.48
+    -21.45 < f_c - f_7 < 23.63
+    -14.54 < f_c - f_8 < 25.79
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -29.15
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 1.10000
+    -4.22 < f_c - f_0 < 28.06
+    -7.27 < f_c - f_1 < 15.42
+    -9.31 < f_c - f_2 < 26.16
+    -6.38 < f_c - f_3 < 11.33
+    -6.23 < f_c - f_4 < 9.34
+    -4.87 < f_c - f_5 < 10.84
+    -8.89 < f_c - f_6 < 53.12
+    -7.54 < f_c - f_7 < 13.04
+    -5.72 < f_c - f_8 < 16.20
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -9.31
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.65000
+    3.44 < f_c - f_0 < 21.52
+    -1.12 < f_c - f_1 < 10.94
+    0.85 < f_c - f_2 < 19.42
+    -0.06 < f_c - f_3 < 7.79
+    -2.21 < f_c - f_4 < 5.91
+    -0.28 < f_c - f_5 < 8.64
+    2.72 < f_c - f_6 < 39.57
+    -1.09 < f_c - f_7 < 8.61
+    -0.90 < f_c - f_8 < 11.68
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -2.21
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.42500
+    7.41 < f_c - f_0 < 18.01
+    1.77 < f_c - f_1 < 8.58
+    5.72 < f_c - f_2 < 15.78
+    2.03 < f_c - f_3 < 6.28
+    -0.47 < f_c - f_4 < 4.49
+    1.79 < f_c - f_5 < 7.17
+    9.62 < f_c - f_6 < 32.86
+    1.71 < f_c - f_7 < 6.54
+    1.73 < f_c - f_8 < 9.26
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = -0.47
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.31250
+    8.90 < f_c - f_0 < 16.54
+    2.79 < f_c - f_1 < 7.60
+    7.38 < f_c - f_2 < 14.22
+    2.73 < f_c - f_3 < 5.60
+    0.26 < f_c - f_4 < 3.79
+    2.58 < f_c - f_5 < 6.40
+    12.77 < f_c - f_6 < 29.73
+    2.58 < f_c - f_7 < 5.74
+    2.75 < f_c - f_8 < 8.26
+[L2][binary search] step = 5, eps = 0.31250, gap_gx = 0.26
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.36875
+    8.22 < f_c - f_0 < 17.23
+    2.34 < f_c - f_1 < 8.04
+    6.76 < f_c - f_2 < 14.83
+    2.47 < f_c - f_3 < 5.86
+    -0.06 < f_c - f_4 < 4.11
+    2.24 < f_c - f_5 < 6.74
+    11.25 < f_c - f_6 < 31.26
+    2.29 < f_c - f_7 < 6.03
+    2.25 < f_c - f_8 < 8.75
+[L2][binary search] step = 6, eps = 0.36875, gap_gx = -0.06
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.34063
+    8.56 < f_c - f_0 < 16.88
+    2.57 < f_c - f_1 < 7.82
+    7.07 < f_c - f_2 < 14.53
+    2.60 < f_c - f_3 < 5.73
+    0.10 < f_c - f_4 < 3.95
+    2.41 < f_c - f_5 < 6.57
+    12.01 < f_c - f_6 < 30.50
+    2.44 < f_c - f_7 < 5.88
+    2.50 < f_c - f_8 < 8.50
+[L2][binary search] step = 7, eps = 0.34063, gap_gx = 0.10
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.35469
+    8.39 < f_c - f_0 < 17.06
+    2.45 < f_c - f_1 < 7.93
+    6.91 < f_c - f_2 < 14.68
+    2.54 < f_c - f_3 < 5.80
+    0.02 < f_c - f_4 < 4.03
+    2.32 < f_c - f_5 < 6.65
+    11.63 < f_c - f_6 < 30.88
+    2.37 < f_c - f_7 < 5.96
+    2.38 < f_c - f_8 < 8.63
+[L2][binary search] step = 8, eps = 0.35469, gap_gx = 0.02
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.36172
+    8.30 < f_c - f_0 < 17.14
+    2.40 < f_c - f_1 < 7.98
+    6.84 < f_c - f_2 < 14.76
+    2.50 < f_c - f_3 < 5.83
+    -0.02 < f_c - f_4 < 4.07
+    2.28 < f_c - f_5 < 6.70
+    11.44 < f_c - f_6 < 31.07
+    2.33 < f_c - f_7 < 5.99
+    2.31 < f_c - f_8 < 8.69
+[L2][binary search] step = 9, eps = 0.36172, gap_gx = -0.02
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.35820
+    8.35 < f_c - f_0 < 17.10
+    2.43 < f_c - f_1 < 7.95
+    6.88 < f_c - f_2 < 14.72
+    2.52 < f_c - f_3 < 5.82
+    -0.00 < f_c - f_4 < 4.05
+    2.30 < f_c - f_5 < 6.68
+    11.53 < f_c - f_6 < 30.98
+    2.35 < f_c - f_7 < 5.97
+    2.34 < f_c - f_8 < 8.66
+[L2][binary search] step = 10, eps = 0.35820, gap_gx = -0.00
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.35645
+    8.37 < f_c - f_0 < 17.08
+    2.44 < f_c - f_1 < 7.94
+    6.89 < f_c - f_2 < 14.70
+    2.53 < f_c - f_3 < 5.81
+    0.01 < f_c - f_4 < 4.04
+    2.31 < f_c - f_5 < 6.67
+    11.58 < f_c - f_6 < 30.93
+    2.36 < f_c - f_7 < 5.96
+    2.36 < f_c - f_8 < 8.64
+[L2][binary search] step = 11, eps = 0.35645, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 7, id = 7, true_class = 9, target_class = 9 robustness_gx = 0.35645, avg_robustness_gx = 0.46306, time = 0.0085, total_time = 0.0845
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 5 neurons never activated, 4 neurons always activated
+epsilon = 0.20000
+    4.87 < f_c - f_0 < 6.43
+    12.74 < f_c - f_1 < 14.46
+    3.77 < f_c - f_2 < 4.85
+    6.44 < f_c - f_3 < 7.86
+    -1.80 < f_c - f_4 < 0.40
+    4.69 < f_c - f_6 < 7.10
+    10.84 < f_c - f_7 < 13.85
+    2.52 < f_c - f_8 < 3.43
+    2.77 < f_c - f_9 < 4.79
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = -1.80
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 5 neurons never activated, 4 neurons always activated
+epsilon = 0.10000
+    5.35 < f_c - f_0 < 6.10
+    13.17 < f_c - f_1 < 14.03
+    4.04 < f_c - f_2 < 4.58
+    6.79 < f_c - f_3 < 7.50
+    -1.25 < f_c - f_4 < -0.15
+    5.29 < f_c - f_6 < 6.49
+    11.66 < f_c - f_7 < 13.15
+    2.73 < f_c - f_8 < 3.17
+    3.27 < f_c - f_9 < 4.29
+[L2][binary search] step = 1, eps = 0.10000, gap_gx = -1.25
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 5 neurons never activated, 4 neurons always activated
+epsilon = 0.05000
+    5.59 < f_c - f_0 < 5.93
+    13.39 < f_c - f_1 < 13.82
+    4.18 < f_c - f_2 < 4.45
+    6.97 < f_c - f_3 < 7.32
+    -0.97 < f_c - f_4 < -0.42
+    5.59 < f_c - f_6 < 6.19
+    12.07 < f_c - f_7 < 12.79
+    2.83 < f_c - f_8 < 3.04
+    3.53 < f_c - f_9 < 4.03
+[L2][binary search] step = 2, eps = 0.05000, gap_gx = -0.97
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.02500
+    5.69 < f_c - f_0 < 5.83
+    13.50 < f_c - f_1 < 13.71
+    4.25 < f_c - f_2 < 4.38
+    7.06 < f_c - f_3 < 7.24
+    -0.84 < f_c - f_4 < -0.56
+    5.74 < f_c - f_6 < 6.04
+    12.26 < f_c - f_7 < 12.61
+    2.89 < f_c - f_8 < 2.98
+    3.65 < f_c - f_9 < 3.90
+[L2][binary search] step = 3, eps = 0.02500, gap_gx = -0.84
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.01250
+    5.73 < f_c - f_0 < 5.80
+    13.55 < f_c - f_1 < 13.66
+    4.28 < f_c - f_2 < 4.35
+    7.10 < f_c - f_3 < 7.19
+    -0.77 < f_c - f_4 < -0.63
+    5.82 < f_c - f_6 < 5.97
+    12.35 < f_c - f_7 < 12.52
+    2.91 < f_c - f_8 < 2.96
+    3.72 < f_c - f_9 < 3.84
+[L2][binary search] step = 4, eps = 0.01250, gap_gx = -0.77
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00625
+    5.74 < f_c - f_0 < 5.78
+    13.58 < f_c - f_1 < 13.63
+    4.30 < f_c - f_2 < 4.33
+    7.13 < f_c - f_3 < 7.17
+    -0.73 < f_c - f_4 < -0.66
+    5.85 < f_c - f_6 < 5.93
+    12.39 < f_c - f_7 < 12.48
+    2.92 < f_c - f_8 < 2.94
+    3.75 < f_c - f_9 < 3.81
+[L2][binary search] step = 5, eps = 0.00625, gap_gx = -0.73
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00313
+    5.75 < f_c - f_0 < 5.77
+    13.59 < f_c - f_1 < 13.62
+    4.30 < f_c - f_2 < 4.32
+    7.14 < f_c - f_3 < 7.16
+    -0.72 < f_c - f_4 < -0.68
+    5.87 < f_c - f_6 < 5.91
+    12.41 < f_c - f_7 < 12.46
+    2.93 < f_c - f_8 < 2.94
+    3.76 < f_c - f_9 < 3.79
+[L2][binary search] step = 6, eps = 0.00313, gap_gx = -0.72
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00156
+    5.76 < f_c - f_0 < 5.77
+    13.60 < f_c - f_1 < 13.61
+    4.31 < f_c - f_2 < 4.32
+    7.14 < f_c - f_3 < 7.15
+    -0.71 < f_c - f_4 < -0.69
+    5.88 < f_c - f_6 < 5.90
+    12.42 < f_c - f_7 < 12.45
+    2.93 < f_c - f_8 < 2.94
+    3.77 < f_c - f_9 < 3.79
+[L2][binary search] step = 7, eps = 0.00156, gap_gx = -0.71
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00078
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.61
+    4.31 < f_c - f_2 < 4.31
+    7.14 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.69
+    5.89 < f_c - f_6 < 5.90
+    12.43 < f_c - f_7 < 12.44
+    2.93 < f_c - f_8 < 2.93
+    3.77 < f_c - f_9 < 3.78
+[L2][binary search] step = 8, eps = 0.00078, gap_gx = -0.70
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00039
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.61
+    4.31 < f_c - f_2 < 4.31
+    7.15 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.70
+    5.89 < f_c - f_6 < 5.89
+    12.43 < f_c - f_7 < 12.44
+    2.93 < f_c - f_8 < 2.93
+    3.78 < f_c - f_9 < 3.78
+[L2][binary search] step = 9, eps = 0.00039, gap_gx = -0.70
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00020
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.60
+    4.31 < f_c - f_2 < 4.31
+    7.15 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.70
+    5.89 < f_c - f_6 < 5.89
+    12.43 < f_c - f_7 < 12.44
+    2.93 < f_c - f_8 < 2.93
+    3.78 < f_c - f_9 < 3.78
+[L2][binary search] step = 10, eps = 0.00020, gap_gx = -0.70
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00010
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.60
+    4.31 < f_c - f_2 < 4.31
+    7.15 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.70
+    5.89 < f_c - f_6 < 5.89
+    12.43 < f_c - f_7 < 12.44
+    2.93 < f_c - f_8 < 2.93
+    3.78 < f_c - f_9 < 3.78
+[L2][binary search] step = 11, eps = 0.00010, gap_gx = -0.70
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00005
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.60
+    4.31 < f_c - f_2 < 4.31
+    7.15 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.70
+    5.89 < f_c - f_6 < 5.89
+    12.43 < f_c - f_7 < 12.43
+    2.93 < f_c - f_8 < 2.93
+    3.78 < f_c - f_9 < 3.78
+[L2][binary search] step = 12, eps = 0.00005, gap_gx = -0.70
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00002
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.60
+    4.31 < f_c - f_2 < 4.31
+    7.15 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.70
+    5.89 < f_c - f_6 < 5.89
+    12.43 < f_c - f_7 < 12.43
+    2.93 < f_c - f_8 < 2.93
+    3.78 < f_c - f_9 < 3.78
+[L2][binary search] step = 13, eps = 0.00002, gap_gx = -0.70
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 6 neurons never activated, 4 neurons always activated
+epsilon = 0.00001
+    5.76 < f_c - f_0 < 5.76
+    13.60 < f_c - f_1 < 13.60
+    4.31 < f_c - f_2 < 4.31
+    7.15 < f_c - f_3 < 7.15
+    -0.70 < f_c - f_4 < -0.70
+    5.89 < f_c - f_6 < 5.89
+    12.43 < f_c - f_7 < 12.43
+    2.93 < f_c - f_8 < 2.93
+    3.78 < f_c - f_9 < 3.78
+[L2][binary search] step = 14, eps = 0.00001, gap_gx = -0.70
+[L1] model = models/mnist_2layer_relu_20, seq = 8, id = 8, true_class = 5, target_class = 5 robustness_gx = 0.00000, avg_robustness_gx = 0.41160, time = 0.0106, total_time = 0.0951
+layer 0 4 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 7 neurons always activated
+epsilon = 0.20000
+    6.04 < f_c - f_0 < 10.38
+    13.20 < f_c - f_1 < 16.08
+    6.33 < f_c - f_2 < 10.06
+    6.26 < f_c - f_3 < 7.42
+    3.43 < f_c - f_4 < 5.71
+    5.95 < f_c - f_5 < 7.27
+    7.64 < f_c - f_6 < 17.11
+    2.18 < f_c - f_7 < 4.24
+    3.83 < f_c - f_8 < 6.66
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 2.18
+layer 0 2 neurons never activated, 3 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -16.49 < f_c - f_0 < 34.96
+    -7.25 < f_c - f_1 < 33.74
+    -23.45 < f_c - f_2 < 36.21
+    -13.67 < f_c - f_3 < 18.65
+    -11.06 < f_c - f_4 < 18.76
+    -8.69 < f_c - f_5 < 15.44
+    -24.33 < f_c - f_6 < 70.58
+    -17.39 < f_c - f_7 < 20.52
+    -9.90 < f_c - f_8 < 23.78
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -24.33
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 1.10000
+    -4.01 < f_c - f_0 < 22.41
+    4.87 < f_c - f_1 < 24.31
+    -4.96 < f_c - f_2 < 21.98
+    -0.01 < f_c - f_3 < 11.27
+    -2.60 < f_c - f_4 < 11.22
+    -0.05 < f_c - f_5 < 11.06
+    -7.95 < f_c - f_6 < 42.79
+    -4.92 < f_c - f_7 < 11.14
+    -2.24 < f_c - f_8 < 14.94
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -7.95
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.65000
+    2.11 < f_c - f_0 < 16.33
+    10.20 < f_c - f_1 < 19.98
+    3.04 < f_c - f_2 < 15.39
+    4.52 < f_c - f_3 < 8.88
+    0.81 < f_c - f_4 < 8.39
+    4.18 < f_c - f_5 < 9.03
+    0.66 < f_c - f_6 < 29.82
+    -0.04 < f_c - f_7 < 7.09
+    1.58 < f_c - f_8 < 10.71
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -0.04
+layer 0 4 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.42500
+    4.23 < f_c - f_0 < 13.32
+    11.84 < f_c - f_1 < 17.94
+    4.95 < f_c - f_2 < 12.54
+    5.56 < f_c - f_3 < 8.04
+    2.16 < f_c - f_4 < 7.02
+    5.23 < f_c - f_5 < 8.05
+    4.24 < f_c - f_6 < 23.40
+    1.22 < f_c - f_7 < 5.59
+    2.79 < f_c - f_8 < 8.61
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = 1.22
+layer 0 4 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.53750
+    3.31 < f_c - f_0 < 14.73
+    11.16 < f_c - f_1 < 18.87
+    4.26 < f_c - f_2 < 13.77
+    5.21 < f_c - f_3 < 8.34
+    1.53 < f_c - f_4 < 7.68
+    4.87 < f_c - f_5 < 8.43
+    2.56 < f_c - f_6 < 26.54
+    0.73 < f_c - f_7 < 6.22
+    2.29 < f_c - f_8 < 9.59
+[L2][binary search] step = 5, eps = 0.53750, gap_gx = 0.73
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.59375
+    2.83 < f_c - f_0 < 15.46
+    10.80 < f_c - f_1 < 19.35
+    3.86 < f_c - f_2 < 14.44
+    5.00 < f_c - f_3 < 8.53
+    1.20 < f_c - f_4 < 8.01
+    4.67 < f_c - f_5 < 8.64
+    1.70 < f_c - f_6 < 28.13
+    0.46 < f_c - f_7 < 6.56
+    2.03 < f_c - f_8 < 10.10
+[L2][binary search] step = 6, eps = 0.59375, gap_gx = 0.46
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.62187
+    2.48 < f_c - f_0 < 15.90
+    10.52 < f_c - f_1 < 19.67
+    3.50 < f_c - f_2 < 14.91
+    4.78 < f_c - f_3 < 8.70
+    1.02 < f_c - f_4 < 8.20
+    4.43 < f_c - f_5 < 8.85
+    1.19 < f_c - f_6 < 28.98
+    0.23 < f_c - f_7 < 6.81
+    1.81 < f_c - f_8 < 10.41
+[L2][binary search] step = 7, eps = 0.62187, gap_gx = 0.23
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.63594
+    2.29 < f_c - f_0 < 16.12
+    10.36 < f_c - f_1 < 19.83
+    3.27 < f_c - f_2 < 15.15
+    4.65 < f_c - f_3 < 8.79
+    0.92 < f_c - f_4 < 8.29
+    4.30 < f_c - f_5 < 8.94
+    0.93 < f_c - f_6 < 29.41
+    0.09 < f_c - f_7 < 6.95
+    1.69 < f_c - f_8 < 10.56
+[L2][binary search] step = 8, eps = 0.63594, gap_gx = 0.09
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.64297
+    2.20 < f_c - f_0 < 16.22
+    10.28 < f_c - f_1 < 19.90
+    3.15 < f_c - f_2 < 15.27
+    4.59 < f_c - f_3 < 8.84
+    0.86 < f_c - f_4 < 8.34
+    4.24 < f_c - f_5 < 8.99
+    0.79 < f_c - f_6 < 29.62
+    0.03 < f_c - f_7 < 7.02
+    1.64 < f_c - f_8 < 10.63
+[L2][binary search] step = 9, eps = 0.64297, gap_gx = 0.03
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.64648
+    2.15 < f_c - f_0 < 16.27
+    10.24 < f_c - f_1 < 19.94
+    3.09 < f_c - f_2 < 15.33
+    4.55 < f_c - f_3 < 8.86
+    0.84 < f_c - f_4 < 8.37
+    4.21 < f_c - f_5 < 9.01
+    0.73 < f_c - f_6 < 29.72
+    -0.01 < f_c - f_7 < 7.06
+    1.61 < f_c - f_8 < 10.67
+[L2][binary search] step = 10, eps = 0.64648, gap_gx = -0.01
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.64473
+    2.18 < f_c - f_0 < 16.25
+    10.26 < f_c - f_1 < 19.92
+    3.12 < f_c - f_2 < 15.30
+    4.57 < f_c - f_3 < 8.85
+    0.85 < f_c - f_4 < 8.35
+    4.22 < f_c - f_5 < 9.00
+    0.76 < f_c - f_6 < 29.67
+    0.01 < f_c - f_7 < 7.04
+    1.62 < f_c - f_8 < 10.65
+[L2][binary search] step = 11, eps = 0.64473, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 9, id = 9, true_class = 9, target_class = 9 robustness_gx = 0.64473, avg_robustness_gx = 0.43492, time = 0.0086, total_time = 0.1037
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    17.42 < f_c - f_1 < 20.17
+    4.91 < f_c - f_2 < 7.55
+    4.08 < f_c - f_3 < 7.70
+    16.36 < f_c - f_4 < 20.05
+    3.39 < f_c - f_5 < 5.27
+    9.28 < f_c - f_6 < 12.08
+    12.95 < f_c - f_7 < 15.80
+    4.92 < f_c - f_8 < 6.73
+    10.74 < f_c - f_9 < 13.09
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 3.39
+layer 0 2 neurons never activated, 3 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 2 neurons never activated, 2 neurons always activated
+epsilon = 2.00000
+    -7.94 < f_c - f_1 < 36.15
+    -18.58 < f_c - f_2 < 18.31
+    -27.74 < f_c - f_3 < 27.38
+    -19.06 < f_c - f_4 < 41.32
+    -23.06 < f_c - f_5 < 18.78
+    -12.79 < f_c - f_6 < 44.58
+    -16.44 < f_c - f_7 < 32.52
+    -9.92 < f_c - f_8 < 17.38
+    -17.57 < f_c - f_9 < 31.72
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -27.74
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 3 neurons never activated, 4 neurons always activated
+epsilon = 1.10000
+    6.54 < f_c - f_1 < 28.22
+    -6.59 < f_c - f_2 < 13.23
+    -10.78 < f_c - f_3 < 18.27
+    1.21 < f_c - f_4 < 31.57
+    -7.74 < f_c - f_5 < 12.74
+    -2.79 < f_c - f_6 < 26.87
+    -0.32 < f_c - f_7 < 24.48
+    -1.47 < f_c - f_8 < 12.26
+    -1.30 < f_c - f_9 < 23.15
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -10.78
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 7 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.65000
+    12.85 < f_c - f_1 < 24.08
+    -0.32 < f_c - f_2 < 10.58
+    -2.45 < f_c - f_3 < 12.80
+    10.20 < f_c - f_4 < 25.72
+    -0.76 < f_c - f_5 < 8.72
+    3.97 < f_c - f_6 < 18.07
+    7.24 < f_c - f_7 < 20.03
+    2.11 < f_c - f_8 < 9.54
+    5.96 < f_c - f_9 < 17.77
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -2.45
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.42500
+    15.71 < f_c - f_1 < 21.82
+    2.93 < f_c - f_2 < 9.01
+    1.79 < f_c - f_3 < 9.86
+    14.04 < f_c - f_4 < 22.36
+    2.19 < f_c - f_5 < 6.44
+    7.47 < f_c - f_6 < 13.92
+    10.84 < f_c - f_7 < 17.60
+    3.78 < f_c - f_8 < 7.98
+    9.18 < f_c - f_9 < 14.80
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = 1.79
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.53750
+    14.30 < f_c - f_1 < 23.00
+    1.33 < f_c - f_2 < 9.83
+    -0.29 < f_c - f_3 < 11.40
+    12.21 < f_c - f_4 < 24.06
+    0.80 < f_c - f_5 < 7.59
+    5.73 < f_c - f_6 < 15.89
+    9.08 < f_c - f_7 < 18.85
+    2.95 < f_c - f_8 < 8.79
+    7.62 < f_c - f_9 < 16.33
+[L2][binary search] step = 5, eps = 0.53750, gap_gx = -0.29
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.48125
+    15.01 < f_c - f_1 < 22.43
+    2.13 < f_c - f_2 < 9.44
+    0.76 < f_c - f_3 < 10.67
+    13.12 < f_c - f_4 < 23.24
+    1.51 < f_c - f_5 < 7.03
+    6.57 < f_c - f_6 < 14.89
+    9.96 < f_c - f_7 < 18.25
+    3.36 < f_c - f_8 < 8.40
+    8.41 < f_c - f_9 < 15.58
+[L2][binary search] step = 6, eps = 0.48125, gap_gx = 0.76
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.50938
+    14.66 < f_c - f_1 < 22.72
+    1.73 < f_c - f_2 < 9.64
+    0.24 < f_c - f_3 < 11.05
+    12.67 < f_c - f_4 < 23.65
+    1.16 < f_c - f_5 < 7.32
+    6.15 < f_c - f_6 < 15.39
+    9.52 < f_c - f_7 < 18.56
+    3.16 < f_c - f_8 < 8.60
+    8.02 < f_c - f_9 < 15.96
+[L2][binary search] step = 7, eps = 0.50938, gap_gx = 0.24
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.52344
+    14.48 < f_c - f_1 < 22.86
+    1.53 < f_c - f_2 < 9.73
+    -0.03 < f_c - f_3 < 11.23
+    12.44 < f_c - f_4 < 23.85
+    0.98 < f_c - f_5 < 7.45
+    5.94 < f_c - f_6 < 15.64
+    9.30 < f_c - f_7 < 18.71
+    3.06 < f_c - f_8 < 8.70
+    7.82 < f_c - f_9 < 16.15
+[L2][binary search] step = 8, eps = 0.52344, gap_gx = -0.03
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.51641
+    14.57 < f_c - f_1 < 22.79
+    1.63 < f_c - f_2 < 9.68
+    0.10 < f_c - f_3 < 11.14
+    12.55 < f_c - f_4 < 23.75
+    1.07 < f_c - f_5 < 7.39
+    6.04 < f_c - f_6 < 15.51
+    9.41 < f_c - f_7 < 18.63
+    3.11 < f_c - f_8 < 8.65
+    7.92 < f_c - f_9 < 16.05
+[L2][binary search] step = 9, eps = 0.51641, gap_gx = 0.10
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.51992
+    14.52 < f_c - f_1 < 22.83
+    1.58 < f_c - f_2 < 9.71
+    0.04 < f_c - f_3 < 11.18
+    12.50 < f_c - f_4 < 23.80
+    1.03 < f_c - f_5 < 7.42
+    5.99 < f_c - f_6 < 15.57
+    9.36 < f_c - f_7 < 18.67
+    3.08 < f_c - f_8 < 8.67
+    7.87 < f_c - f_9 < 16.10
+[L2][binary search] step = 10, eps = 0.51992, gap_gx = 0.04
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.52168
+    14.50 < f_c - f_1 < 22.85
+    1.56 < f_c - f_2 < 9.72
+    0.00 < f_c - f_3 < 11.21
+    12.47 < f_c - f_4 < 23.83
+    1.00 < f_c - f_5 < 7.44
+    5.96 < f_c - f_6 < 15.61
+    9.33 < f_c - f_7 < 18.69
+    3.07 < f_c - f_8 < 8.68
+    7.84 < f_c - f_9 < 16.12
+[L2][binary search] step = 11, eps = 0.52168, gap_gx = 0.00
+[L1] model = models/mnist_2layer_relu_20, seq = 10, id = 10, true_class = 0, target_class = 0 robustness_gx = 0.52168, avg_robustness_gx = 0.44280, time = 0.0086, total_time = 0.1123
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.20000
+    3.23 < f_c - f_0 < 5.55
+    6.17 < f_c - f_1 < 9.22
+    1.82 < f_c - f_2 < 4.61
+    4.69 < f_c - f_3 < 9.18
+    2.77 < f_c - f_4 < 5.65
+    1.58 < f_c - f_5 < 4.27
+    8.46 < f_c - f_7 < 12.55
+    0.37 < f_c - f_8 < 3.14
+    4.63 < f_c - f_9 < 8.00
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 0.37
+layer 0 2 neurons never activated, 2 neurons always activated
+layer 1 40 neurons never activated, 5 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -33.93 < f_c - f_0 < 20.32
+    -42.94 < f_c - f_1 < 33.06
+    -46.14 < f_c - f_2 < 22.99
+    -56.97 < f_c - f_3 < 36.78
+    -45.42 < f_c - f_4 < 29.67
+    -49.20 < f_c - f_5 < 26.38
+    -52.17 < f_c - f_7 < 38.04
+    -39.82 < f_c - f_8 < 23.48
+    -47.62 < f_c - f_9 < 33.29
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -56.97
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 2 neurons never activated, 2 neurons always activated
+epsilon = 1.10000
+    -13.02 < f_c - f_0 < 13.14
+    -15.27 < f_c - f_1 < 21.29
+    -20.14 < f_c - f_2 < 13.92
+    -23.55 < f_c - f_3 < 22.88
+    -16.79 < f_c - f_4 < 18.39
+    -19.40 < f_c - f_5 < 15.55
+    -18.33 < f_c - f_7 < 24.89
+    -16.65 < f_c - f_8 < 13.41
+    -17.13 < f_c - f_9 < 20.61
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -23.55
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 7 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 0.65000
+    -2.75 < f_c - f_0 < 9.34
+    -1.10 < f_c - f_1 < 14.64
+    -6.31 < f_c - f_2 < 8.98
+    -5.72 < f_c - f_3 < 15.74
+    -3.26 < f_c - f_4 < 11.85
+    -5.20 < f_c - f_5 < 9.54
+    -1.48 < f_c - f_7 < 18.60
+    -5.61 < f_c - f_8 < 8.07
+    -2.70 < f_c - f_9 < 14.15
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -6.31
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.42500
+    1.24 < f_c - f_0 < 6.79
+    4.16 < f_c - f_1 < 10.71
+    -0.67 < f_c - f_2 < 5.84
+    1.29 < f_c - f_3 < 11.15
+    1.31 < f_c - f_4 < 7.64
+    -0.11 < f_c - f_5 < 5.66
+    5.22 < f_c - f_7 < 14.50
+    -1.42 < f_c - f_8 < 4.61
+    2.61 < f_c - f_9 < 9.77
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = -1.42
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.31250
+    2.27 < f_c - f_0 < 6.18
+    5.16 < f_c - f_1 < 9.97
+    0.58 < f_c - f_2 < 5.23
+    2.99 < f_c - f_3 < 10.17
+    2.04 < f_c - f_4 < 6.64
+    0.73 < f_c - f_5 < 4.97
+    6.86 < f_c - f_7 < 13.54
+    -0.53 < f_c - f_8 < 3.87
+    3.61 < f_c - f_9 < 8.88
+[L2][binary search] step = 5, eps = 0.31250, gap_gx = -0.53
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.25625
+    2.78 < f_c - f_0 < 5.85
+    5.67 < f_c - f_1 < 9.59
+    1.20 < f_c - f_2 < 4.93
+    3.84 < f_c - f_3 < 9.68
+    2.40 < f_c - f_4 < 6.15
+    1.16 < f_c - f_5 < 4.62
+    7.68 < f_c - f_7 < 13.04
+    -0.07 < f_c - f_8 < 3.49
+    4.12 < f_c - f_9 < 8.44
+[L2][binary search] step = 6, eps = 0.25625, gap_gx = -0.07
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.22812
+    3.03 < f_c - f_0 < 5.68
+    5.92 < f_c - f_1 < 9.41
+    1.51 < f_c - f_2 < 4.77
+    4.27 < f_c - f_3 < 9.43
+    2.59 < f_c - f_4 < 5.90
+    1.37 < f_c - f_5 < 4.45
+    8.09 < f_c - f_7 < 12.78
+    0.16 < f_c - f_8 < 3.31
+    4.37 < f_c - f_9 < 8.22
+[L2][binary search] step = 7, eps = 0.22812, gap_gx = 0.16
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.24219
+    2.91 < f_c - f_0 < 5.76
+    5.79 < f_c - f_1 < 9.50
+    1.35 < f_c - f_2 < 4.85
+    4.06 < f_c - f_3 < 9.55
+    2.49 < f_c - f_4 < 6.02
+    1.26 < f_c - f_5 < 4.53
+    7.89 < f_c - f_7 < 12.91
+    0.04 < f_c - f_8 < 3.40
+    4.24 < f_c - f_9 < 8.33
+[L2][binary search] step = 8, eps = 0.24219, gap_gx = 0.04
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.24922
+    2.84 < f_c - f_0 < 5.80
+    5.73 < f_c - f_1 < 9.55
+    1.28 < f_c - f_2 < 4.89
+    3.95 < f_c - f_3 < 9.61
+    2.45 < f_c - f_4 < 6.09
+    1.21 < f_c - f_5 < 4.58
+    7.78 < f_c - f_7 < 12.98
+    -0.02 < f_c - f_8 < 3.45
+    4.18 < f_c - f_9 < 8.38
+[L2][binary search] step = 9, eps = 0.24922, gap_gx = -0.02
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.24570
+    2.87 < f_c - f_0 < 5.78
+    5.76 < f_c - f_1 < 9.52
+    1.32 < f_c - f_2 < 4.87
+    4.00 < f_c - f_3 < 9.58
+    2.47 < f_c - f_4 < 6.05
+    1.24 < f_c - f_5 < 4.56
+    7.83 < f_c - f_7 < 12.94
+    0.01 < f_c - f_8 < 3.42
+    4.21 < f_c - f_9 < 8.36
+[L2][binary search] step = 10, eps = 0.24570, gap_gx = 0.01
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.24746
+    2.86 < f_c - f_0 < 5.79
+    5.74 < f_c - f_1 < 9.54
+    1.30 < f_c - f_2 < 4.88
+    3.98 < f_c - f_3 < 9.60
+    2.46 < f_c - f_4 < 6.07
+    1.22 < f_c - f_5 < 4.57
+    7.81 < f_c - f_7 < 12.96
+    -0.00 < f_c - f_8 < 3.44
+    4.20 < f_c - f_9 < 8.37
+[L2][binary search] step = 11, eps = 0.24746, gap_gx = -0.00
+layer 0 3 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.24658
+    2.87 < f_c - f_0 < 5.79
+    5.75 < f_c - f_1 < 9.53
+    1.31 < f_c - f_2 < 4.87
+    3.99 < f_c - f_3 < 9.59
+    2.47 < f_c - f_4 < 6.06
+    1.23 < f_c - f_5 < 4.56
+    7.82 < f_c - f_7 < 12.95
+    0.01 < f_c - f_8 < 3.43
+    4.20 < f_c - f_9 < 8.36
+[L2][binary search] step = 12, eps = 0.24658, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 11, id = 11, true_class = 6, target_class = 6 robustness_gx = 0.24658, avg_robustness_gx = 0.42645, time = 0.0093, total_time = 0.1216
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    6.87 < f_c - f_0 < 11.40
+    14.51 < f_c - f_1 < 17.83
+    7.18 < f_c - f_2 < 11.06
+    6.62 < f_c - f_3 < 8.22
+    2.52 < f_c - f_4 < 4.82
+    5.01 < f_c - f_5 < 7.04
+    10.41 < f_c - f_6 < 19.48
+    2.99 < f_c - f_7 < 5.22
+    4.76 < f_c - f_8 < 7.94
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 2.52
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -17.45 < f_c - f_0 < 35.64
+    -7.41 < f_c - f_1 < 34.94
+    -25.37 < f_c - f_2 < 37.31
+    -17.48 < f_c - f_3 < 20.53
+    -12.58 < f_c - f_4 < 19.44
+    -11.34 < f_c - f_5 < 15.49
+    -23.95 < f_c - f_6 < 73.42
+    -17.39 < f_c - f_7 < 22.25
+    -10.80 < f_c - f_8 < 24.51
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -25.37
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 4 neurons always activated
+epsilon = 1.10000
+    -4.52 < f_c - f_0 < 23.45
+    4.70 < f_c - f_1 < 26.00
+    -6.29 < f_c - f_2 < 23.51
+    -3.61 < f_c - f_3 < 13.65
+    -4.23 < f_c - f_4 < 11.66
+    -2.77 < f_c - f_5 < 11.05
+    -6.49 < f_c - f_6 < 45.93
+    -4.72 < f_c - f_7 < 13.19
+    -2.83 < f_c - f_8 < 16.00
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -6.49
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.65000
+    1.99 < f_c - f_0 < 17.23
+    10.47 < f_c - f_1 < 21.57
+    3.21 < f_c - f_2 < 16.07
+    3.66 < f_c - f_3 < 9.76
+    -0.19 < f_c - f_4 < 7.70
+    1.61 < f_c - f_5 < 8.80
+    2.59 < f_c - f_6 < 32.20
+    1.03 < f_c - f_7 < 8.58
+    1.13 < f_c - f_8 < 11.86
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -0.19
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.42500
+    4.50 < f_c - f_0 < 14.34
+    12.50 < f_c - f_1 < 19.69
+    5.23 < f_c - f_2 < 13.54
+    5.30 < f_c - f_3 < 8.85
+    1.26 < f_c - f_4 < 6.16
+    3.35 < f_c - f_5 < 7.89
+    6.58 < f_c - f_6 < 25.76
+    2.06 < f_c - f_7 < 6.92
+    2.93 < f_c - f_8 < 9.87
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = 1.26
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.53750
+    3.26 < f_c - f_0 < 15.79
+    11.50 < f_c - f_1 < 20.62
+    4.25 < f_c - f_2 < 14.78
+    4.64 < f_c - f_3 < 9.17
+    0.62 < f_c - f_4 < 6.84
+    2.51 < f_c - f_5 < 8.30
+    4.66 < f_c - f_6 < 28.90
+    1.57 < f_c - f_7 < 7.74
+    2.03 < f_c - f_8 < 10.86
+[L2][binary search] step = 5, eps = 0.53750, gap_gx = 0.62
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.59375
+    2.64 < f_c - f_0 < 16.51
+    10.99 < f_c - f_1 < 21.09
+    3.76 < f_c - f_2 < 15.40
+    4.24 < f_c - f_3 < 9.39
+    0.26 < f_c - f_4 < 7.22
+    2.08 < f_c - f_5 < 8.53
+    3.66 < f_c - f_6 < 30.51
+    1.32 < f_c - f_7 < 8.15
+    1.58 < f_c - f_8 < 11.36
+[L2][binary search] step = 6, eps = 0.59375, gap_gx = 0.26
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.62187
+    2.32 < f_c - f_0 < 16.87
+    10.74 < f_c - f_1 < 21.32
+    3.51 < f_c - f_2 < 15.71
+    3.97 < f_c - f_3 < 9.56
+    0.04 < f_c - f_4 < 7.46
+    1.85 < f_c - f_5 < 8.66
+    3.13 < f_c - f_6 < 31.35
+    1.19 < f_c - f_7 < 8.35
+    1.35 < f_c - f_8 < 11.60
+[L2][binary search] step = 7, eps = 0.62187, gap_gx = 0.04
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.63594
+    2.16 < f_c - f_0 < 17.04
+    10.61 < f_c - f_1 < 21.44
+    3.39 < f_c - f_2 < 15.86
+    3.83 < f_c - f_3 < 9.65
+    -0.07 < f_c - f_4 < 7.57
+    1.73 < f_c - f_5 < 8.72
+    2.86 < f_c - f_6 < 31.77
+    1.12 < f_c - f_7 < 8.45
+    1.24 < f_c - f_8 < 11.73
+[L2][binary search] step = 8, eps = 0.63594, gap_gx = -0.07
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.62891
+    2.24 < f_c - f_0 < 16.96
+    10.68 < f_c - f_1 < 21.38
+    3.45 < f_c - f_2 < 15.79
+    3.90 < f_c - f_3 < 9.61
+    -0.02 < f_c - f_4 < 7.51
+    1.79 < f_c - f_5 < 8.69
+    2.99 < f_c - f_6 < 31.56
+    1.16 < f_c - f_7 < 8.40
+    1.30 < f_c - f_8 < 11.67
+[L2][binary search] step = 9, eps = 0.62891, gap_gx = -0.02
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.62539
+    2.28 < f_c - f_0 < 16.91
+    10.71 < f_c - f_1 < 21.35
+    3.48 < f_c - f_2 < 15.75
+    3.93 < f_c - f_3 < 9.59
+    0.01 < f_c - f_4 < 7.49
+    1.82 < f_c - f_5 < 8.67
+    3.06 < f_c - f_6 < 31.46
+    1.17 < f_c - f_7 < 8.38
+    1.33 < f_c - f_8 < 11.63
+[L2][binary search] step = 10, eps = 0.62539, gap_gx = 0.01
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.62715
+    2.26 < f_c - f_0 < 16.93
+    10.69 < f_c - f_1 < 21.36
+    3.47 < f_c - f_2 < 15.77
+    3.92 < f_c - f_3 < 9.60
+    -0.00 < f_c - f_4 < 7.50
+    1.81 < f_c - f_5 < 8.68
+    3.03 < f_c - f_6 < 31.51
+    1.16 < f_c - f_7 < 8.39
+    1.31 < f_c - f_8 < 11.65
+[L2][binary search] step = 11, eps = 0.62715, gap_gx = -0.00
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.62627
+    2.27 < f_c - f_0 < 16.92
+    10.70 < f_c - f_1 < 21.36
+    3.47 < f_c - f_2 < 15.76
+    3.93 < f_c - f_3 < 9.59
+    0.00 < f_c - f_4 < 7.49
+    1.81 < f_c - f_5 < 8.68
+    3.04 < f_c - f_6 < 31.48
+    1.17 < f_c - f_7 < 8.38
+    1.32 < f_c - f_8 < 11.64
+[L2][binary search] step = 12, eps = 0.62627, gap_gx = 0.00
+[L1] model = models/mnist_2layer_relu_20, seq = 12, id = 12, true_class = 9, target_class = 9 robustness_gx = 0.62627, avg_robustness_gx = 0.44182, time = 0.0092, total_time = 0.1308
+layer 0 4 neurons never activated, 6 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 4 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    23.08 < f_c - f_1 < 25.84
+    8.61 < f_c - f_2 < 10.02
+    9.01 < f_c - f_3 < 10.87
+    15.89 < f_c - f_4 < 19.09
+    5.17 < f_c - f_5 < 6.93
+    12.36 < f_c - f_6 < 14.72
+    9.72 < f_c - f_7 < 12.36
+    7.01 < f_c - f_8 < 8.76
+    8.12 < f_c - f_9 < 10.32
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 5.17
+layer 0 2 neurons never activated, 2 neurons always activated
+layer 1 40 neurons never activated, 5 neurons always activated
+layer 2 2 neurons never activated, 3 neurons always activated
+epsilon = 2.00000
+    0.89 < f_c - f_1 < 41.37
+    -12.34 < f_c - f_2 < 19.78
+    -20.44 < f_c - f_3 < 28.15
+    -13.59 < f_c - f_4 < 41.96
+    -16.13 < f_c - f_5 < 20.65
+    -9.16 < f_c - f_6 < 42.39
+    -15.46 < f_c - f_7 < 28.93
+    -6.15 < f_c - f_8 < 18.35
+    -15.49 < f_c - f_9 < 28.29
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -20.44
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 1.10000
+    14.59 < f_c - f_1 < 32.64
+    1.00 < f_c - f_2 < 14.24
+    -1.66 < f_c - f_3 < 17.66
+    5.23 < f_c - f_4 < 29.17
+    -1.61 < f_c - f_5 < 12.32
+    3.40 < f_c - f_6 < 24.05
+    0.50 < f_c - f_7 < 19.85
+    1.87 < f_c - f_8 < 12.48
+    -0.07 < f_c - f_9 < 17.42
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -1.66
+layer 0 3 neurons never activated, 5 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.65000
+    19.48 < f_c - f_1 < 28.85
+    6.37 < f_c - f_2 < 11.62
+    5.41 < f_c - f_3 < 13.42
+    11.30 < f_c - f_4 < 23.39
+    2.75 < f_c - f_5 < 8.86
+    8.86 < f_c - f_6 < 17.94
+    6.39 < f_c - f_7 < 15.52
+    4.83 < f_c - f_8 < 10.16
+    5.08 < f_c - f_9 < 12.77
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = 2.75
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.87500
+    17.45 < f_c - f_1 < 30.46
+    4.23 < f_c - f_2 < 12.77
+    2.64 < f_c - f_3 < 15.05
+    8.76 < f_c - f_4 < 25.94
+    1.22 < f_c - f_5 < 10.11
+    6.72 < f_c - f_6 < 20.12
+    4.05 < f_c - f_7 < 17.42
+    3.56 < f_c - f_8 < 11.05
+    3.14 < f_c - f_9 < 14.51
+[L2][binary search] step = 4, eps = 0.87500, gap_gx = 1.22
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.98750
+    16.05 < f_c - f_1 < 31.56
+    2.63 < f_c - f_2 < 13.53
+    0.55 < f_c - f_3 < 16.36
+    7.04 < f_c - f_4 < 27.56
+    -0.14 < f_c - f_5 < 11.21
+    5.06 < f_c - f_6 < 22.02
+    2.31 < f_c - f_7 < 18.66
+    2.72 < f_c - f_8 < 11.77
+    1.58 < f_c - f_9 < 15.96
+[L2][binary search] step = 5, eps = 0.98750, gap_gx = -0.14
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.93125
+    16.75 < f_c - f_1 < 31.01
+    3.44 < f_c - f_2 < 13.16
+    1.60 < f_c - f_3 < 15.71
+    7.90 < f_c - f_4 < 26.76
+    0.55 < f_c - f_5 < 10.66
+    5.88 < f_c - f_6 < 21.05
+    3.19 < f_c - f_7 < 18.05
+    3.14 < f_c - f_8 < 11.41
+    2.36 < f_c - f_9 < 15.24
+[L2][binary search] step = 6, eps = 0.93125, gap_gx = 0.55
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.95938
+    16.40 < f_c - f_1 < 31.29
+    3.03 < f_c - f_2 < 13.35
+    1.08 < f_c - f_3 < 16.04
+    7.47 < f_c - f_4 < 27.16
+    0.20 < f_c - f_5 < 10.94
+    5.47 < f_c - f_6 < 21.53
+    2.75 < f_c - f_7 < 18.35
+    2.93 < f_c - f_8 < 11.59
+    1.97 < f_c - f_9 < 15.60
+[L2][binary search] step = 7, eps = 0.95938, gap_gx = 0.20
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.97344
+    16.22 < f_c - f_1 < 31.42
+    2.83 < f_c - f_2 < 13.44
+    0.81 < f_c - f_3 < 16.20
+    7.25 < f_c - f_4 < 27.36
+    0.03 < f_c - f_5 < 11.08
+    5.26 < f_c - f_6 < 21.77
+    2.53 < f_c - f_7 < 18.51
+    2.83 < f_c - f_8 < 11.68
+    1.77 < f_c - f_9 < 15.78
+[L2][binary search] step = 8, eps = 0.97344, gap_gx = 0.03
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.98047
+    16.14 < f_c - f_1 < 31.49
+    2.73 < f_c - f_2 < 13.49
+    0.68 < f_c - f_3 < 16.28
+    7.15 < f_c - f_4 < 27.46
+    -0.06 < f_c - f_5 < 11.14
+    5.16 < f_c - f_6 < 21.89
+    2.42 < f_c - f_7 < 18.58
+    2.78 < f_c - f_8 < 11.72
+    1.68 < f_c - f_9 < 15.87
+[L2][binary search] step = 9, eps = 0.98047, gap_gx = -0.06
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.97695
+    16.18 < f_c - f_1 < 31.46
+    2.78 < f_c - f_2 < 13.46
+    0.75 < f_c - f_3 < 16.24
+    7.20 < f_c - f_4 < 27.41
+    -0.01 < f_c - f_5 < 11.11
+    5.21 < f_c - f_6 < 21.83
+    2.47 < f_c - f_7 < 18.54
+    2.80 < f_c - f_8 < 11.70
+    1.72 < f_c - f_9 < 15.83
+[L2][binary search] step = 10, eps = 0.97695, gap_gx = -0.01
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.97520
+    16.20 < f_c - f_1 < 31.44
+    2.81 < f_c - f_2 < 13.45
+    0.78 < f_c - f_3 < 16.22
+    7.23 < f_c - f_4 < 27.39
+    0.01 < f_c - f_5 < 11.09
+    5.24 < f_c - f_6 < 21.80
+    2.50 < f_c - f_7 < 18.52
+    2.82 < f_c - f_8 < 11.69
+    1.75 < f_c - f_9 < 15.81
+[L2][binary search] step = 11, eps = 0.97520, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 13, id = 13, true_class = 0, target_class = 0 robustness_gx = 0.97520, avg_robustness_gx = 0.47992, time = 0.0085, total_time = 0.1394
+layer 0 3 neurons never activated, 7 neurons always activated
+layer 1 40 neurons never activated, 9 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    13.16 < f_c - f_0 < 16.03
+    7.63 < f_c - f_2 < 11.88
+    1.88 < f_c - f_3 < 5.91
+    7.47 < f_c - f_4 < 10.93
+    8.01 < f_c - f_5 < 10.32
+    17.43 < f_c - f_6 < 26.63
+    5.95 < f_c - f_7 < 9.04
+    6.30 < f_c - f_8 < 8.15
+    6.40 < f_c - f_9 < 9.44
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 1.88
+layer 0 2 neurons never activated, 1 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -8.63 < f_c - f_0 < 33.63
+    -21.34 < f_c - f_2 < 30.67
+    -24.10 < f_c - f_3 < 23.04
+    -19.83 < f_c - f_4 < 29.14
+    -15.78 < f_c - f_5 < 21.97
+    -23.15 < f_c - f_6 < 75.61
+    -19.25 < f_c - f_7 < 24.95
+    -11.13 < f_c - f_8 < 21.90
+    -19.79 < f_c - f_9 < 27.26
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -24.10
+layer 0 2 neurons never activated, 2 neurons always activated
+layer 1 40 neurons never activated, 5 neurons always activated
+layer 2 3 neurons never activated, 2 neurons always activated
+epsilon = 1.10000
+    2.23 < f_c - f_0 < 23.95
+    -8.32 < f_c - f_2 < 21.55
+    -11.30 < f_c - f_3 < 15.54
+    -5.62 < f_c - f_4 < 20.88
+    -2.52 < f_c - f_5 < 16.92
+    -7.13 < f_c - f_6 < 50.60
+    -6.91 < f_c - f_7 < 17.02
+    -2.46 < f_c - f_8 < 15.03
+    -6.03 < f_c - f_9 < 19.13
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -11.30
+layer 0 2 neurons never activated, 5 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.65000
+    7.69 < f_c - f_0 < 20.00
+    -0.34 < f_c - f_2 < 16.97
+    -4.78 < f_c - f_3 < 10.87
+    1.46 < f_c - f_4 < 16.22
+    3.35 < f_c - f_5 < 13.81
+    4.46 < f_c - f_6 < 38.61
+    -0.14 < f_c - f_7 < 13.22
+    2.07 < f_c - f_8 < 11.59
+    0.73 < f_c - f_9 < 14.38
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -4.78
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 7 neurons always activated
+layer 2 3 neurons never activated, 3 neurons always activated
+epsilon = 0.42500
+    10.67 < f_c - f_0 < 18.01
+    4.06 < f_c - f_2 < 14.65
+    -1.35 < f_c - f_3 < 8.40
+    4.75 < f_c - f_4 < 13.49
+    5.93 < f_c - f_5 < 12.05
+    11.30 < f_c - f_6 < 32.50
+    3.28 < f_c - f_7 < 11.21
+    4.35 < f_c - f_8 < 9.79
+    3.72 < f_c - f_9 < 11.82
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = -1.35
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 8 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.31250
+    12.08 < f_c - f_0 < 16.98
+    6.11 < f_c - f_2 < 13.24
+    0.43 < f_c - f_3 < 7.18
+    6.23 < f_c - f_4 < 12.13
+    7.12 < f_c - f_5 < 11.13
+    14.55 < f_c - f_6 < 29.45
+    4.81 < f_c - f_7 < 10.08
+    5.46 < f_c - f_8 < 8.90
+    5.21 < f_c - f_9 < 10.54
+[L2][binary search] step = 5, eps = 0.31250, gap_gx = 0.43
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 7 neurons always activated
+layer 2 3 neurons never activated, 5 neurons always activated
+epsilon = 0.36875
+    11.39 < f_c - f_0 < 17.50
+    5.13 < f_c - f_2 < 13.97
+    -0.43 < f_c - f_3 < 7.79
+    5.51 < f_c - f_4 < 12.80
+    6.54 < f_c - f_5 < 11.59
+    12.97 < f_c - f_6 < 30.94
+    4.09 < f_c - f_7 < 10.65
+    4.92 < f_c - f_8 < 9.33
+    4.48 < f_c - f_9 < 11.16
+[L2][binary search] step = 6, eps = 0.36875, gap_gx = -0.43
+layer 0 2 neurons never activated, 6 neurons always activated
+layer 1 40 neurons never activated, 7 neurons always activated
+layer 2 3 neurons never activated, 6 neurons always activated
+epsilon = 0.34063
+    11.74 < f_c - f_0 < 17.24
+    5.64 < f_c - f_2 < 13.60
+    0.01 < f_c - f_3 < 7.49
+    5.87 < f_c - f_4 < 12.47
+    6.84 < f_c - f_5 < 11.36
+    13.77 < f_c - f_6 < 30.19
+    4.47 < f_c - f_7 < 10.35
+    5.20 < f_c - f_8 < 9.11
+    4.86 < f_c - f_9 < 10.84
+[L2][binary search] step = 7, eps = 0.34063, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 14, id = 14, true_class = 1, target_class = 1 robustness_gx = 0.34063, avg_robustness_gx = 0.47063, time = 0.0057, total_time = 0.1451
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.20000
+    8.55 < f_c - f_0 < 13.49
+    6.81 < f_c - f_1 < 9.54
+    10.27 < f_c - f_2 < 15.27
+    1.06 < f_c - f_3 < 5.38
+    13.74 < f_c - f_4 < 16.95
+    23.03 < f_c - f_6 < 34.02
+    11.60 < f_c - f_7 < 15.72
+    7.17 < f_c - f_8 < 10.71
+    8.60 < f_c - f_9 < 11.21
+[L2][binary search] step = 0, eps = 0.20000, gap_gx = 1.06
+layer 0 2 neurons never activated, 1 neurons always activated
+layer 1 40 neurons never activated, 4 neurons always activated
+layer 2 2 neurons never activated, 1 neurons always activated
+epsilon = 2.00000
+    -14.43 < f_c - f_0 < 39.85
+    -9.56 < f_c - f_1 < 27.23
+    -19.53 < f_c - f_2 < 40.66
+    -16.04 < f_c - f_3 < 21.89
+    -7.03 < f_c - f_4 < 33.62
+    -20.04 < f_c - f_6 < 87.14
+    -17.00 < f_c - f_7 < 40.45
+    -10.92 < f_c - f_8 < 31.40
+    -7.17 < f_c - f_9 < 26.79
+[L2][binary search] step = 1, eps = 2.00000, gap_gx = -20.04
+layer 0 2 neurons never activated, 4 neurons always activated
+layer 1 40 neurons never activated, 6 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 1.10000
+    -3.65 < f_c - f_0 < 25.24
+    -1.66 < f_c - f_1 < 16.92
+    -4.60 < f_c - f_2 < 26.94
+    -8.29 < f_c - f_3 < 14.02
+    4.22 < f_c - f_4 < 24.78
+    -2.36 < f_c - f_6 < 59.56
+    -1.08 < f_c - f_7 < 25.94
+    -2.04 < f_c - f_8 < 19.70
+    1.48 < f_c - f_9 < 18.18
+[L2][binary search] step = 2, eps = 1.10000, gap_gx = -8.29
+layer 0 2 neurons never activated, 7 neurons always activated
+layer 1 41 neurons never activated, 8 neurons always activated
+layer 2 2 neurons never activated, 5 neurons always activated
+epsilon = 0.65000
+    2.50 < f_c - f_0 < 18.94
+    3.00 < f_c - f_1 < 12.57
+    3.44 < f_c - f_2 < 20.47
+    -4.20 < f_c - f_3 < 9.97
+    9.53 < f_c - f_4 < 20.58
+    10.14 < f_c - f_6 < 46.42
+    5.98 < f_c - f_7 < 20.03
+    2.74 < f_c - f_8 < 14.76
+    5.34 < f_c - f_9 < 14.30
+[L2][binary search] step = 3, eps = 0.65000, gap_gx = -4.20
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.42500
+    5.63 < f_c - f_0 < 16.12
+    4.99 < f_c - f_1 < 10.98
+    7.00 < f_c - f_2 < 17.74
+    -1.58 < f_c - f_3 < 7.71
+    11.76 < f_c - f_4 < 18.65
+    16.71 < f_c - f_6 < 40.10
+    8.90 < f_c - f_7 < 17.77
+    5.03 < f_c - f_8 < 12.67
+    7.03 < f_c - f_9 < 12.70
+[L2][binary search] step = 4, eps = 0.42500, gap_gx = -1.58
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.31250
+    7.09 < f_c - f_0 < 14.81
+    5.90 < f_c - f_1 < 10.26
+    8.63 < f_c - f_2 < 16.51
+    -0.26 < f_c - f_3 < 6.55
+    12.75 < f_c - f_4 < 17.80
+    19.87 < f_c - f_6 < 37.06
+    10.25 < f_c - f_7 < 16.75
+    6.10 < f_c - f_8 < 11.69
+    7.82 < f_c - f_9 < 11.96
+[L2][binary search] step = 5, eps = 0.31250, gap_gx = -0.26
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.25625
+    7.82 < f_c - f_0 < 14.15
+    6.36 < f_c - f_1 < 9.90
+    9.45 < f_c - f_2 < 15.89
+    0.40 < f_c - f_3 < 5.97
+    13.25 < f_c - f_4 < 17.38
+    21.45 < f_c - f_6 < 35.54
+    10.92 < f_c - f_7 < 16.24
+    6.64 < f_c - f_8 < 11.20
+    8.21 < f_c - f_9 < 11.59
+[L2][binary search] step = 6, eps = 0.25625, gap_gx = 0.40
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.28437
+    7.45 < f_c - f_0 < 14.48
+    6.13 < f_c - f_1 < 10.08
+    9.04 < f_c - f_2 < 16.20
+    0.07 < f_c - f_3 < 6.26
+    13.00 < f_c - f_4 < 17.59
+    20.66 < f_c - f_6 < 36.30
+    10.59 < f_c - f_7 < 16.49
+    6.37 < f_c - f_8 < 11.45
+    8.02 < f_c - f_9 < 11.77
+[L2][binary search] step = 7, eps = 0.28437, gap_gx = 0.07
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.29844
+    7.27 < f_c - f_0 < 14.64
+    6.01 < f_c - f_1 < 10.17
+    8.84 < f_c - f_2 < 16.35
+    -0.10 < f_c - f_3 < 6.40
+    12.87 < f_c - f_4 < 17.70
+    20.26 < f_c - f_6 < 36.68
+    10.42 < f_c - f_7 < 16.62
+    6.24 < f_c - f_8 < 11.57
+    7.92 < f_c - f_9 < 11.87
+[L2][binary search] step = 8, eps = 0.29844, gap_gx = -0.10
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.29141
+    7.36 < f_c - f_0 < 14.56
+    6.07 < f_c - f_1 < 10.13
+    8.94 < f_c - f_2 < 16.28
+    -0.01 < f_c - f_3 < 6.33
+    12.94 < f_c - f_4 < 17.64
+    20.46 < f_c - f_6 < 36.49
+    10.50 < f_c - f_7 < 16.56
+    6.30 < f_c - f_8 < 11.51
+    7.97 < f_c - f_9 < 11.82
+[L2][binary search] step = 9, eps = 0.29141, gap_gx = -0.01
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.28789
+    7.41 < f_c - f_0 < 14.52
+    6.10 < f_c - f_1 < 10.10
+    8.99 < f_c - f_2 < 16.24
+    0.03 < f_c - f_3 < 6.29
+    12.97 < f_c - f_4 < 17.62
+    20.56 < f_c - f_6 < 36.39
+    10.54 < f_c - f_7 < 16.53
+    6.34 < f_c - f_8 < 11.48
+    7.99 < f_c - f_9 < 11.80
+[L2][binary search] step = 10, eps = 0.28789, gap_gx = 0.03
+layer 0 2 neurons never activated, 8 neurons always activated
+layer 1 41 neurons never activated, 9 neurons always activated
+layer 2 2 neurons never activated, 6 neurons always activated
+epsilon = 0.28965
+    7.38 < f_c - f_0 < 14.54
+    6.09 < f_c - f_1 < 10.12
+    8.97 < f_c - f_2 < 16.26
+    0.01 < f_c - f_3 < 6.31
+    12.95 < f_c - f_4 < 17.63
+    20.51 < f_c - f_6 < 36.44
+    10.52 < f_c - f_7 < 16.54
+    6.32 < f_c - f_8 < 11.50
+    7.98 < f_c - f_9 < 11.81
+[L2][binary search] step = 11, eps = 0.28965, gap_gx = 0.01
+[L1] model = models/mnist_2layer_relu_20, seq = 15, id = 15, true_class = 5, target_class = 5 robustness_gx = 0.28965, avg_robustness_gx = 0.45932, time = 0.0112, total_time = 0.1564
+Saved Data @:
+/home/justin/Projects/NN_cert_methods/Data/Lip_Lin_mnist_small_norm_2.pkl
+[L0] model = models/mnist_2layer_relu_20, avg robustness_gx = 0.45932, numimage = 16, total_time = 0.1566

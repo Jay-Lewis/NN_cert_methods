@@ -136,7 +136,7 @@ class InputSequential(nn.Sequential):
         return xs[-1]
 
 
-# Data parallel versions of the loss calculation
+# Results parallel versions of the loss calculation
 def robust_loss_parallel(net, epsilon, X, y, proj=None,
                  norm_type='l1', bounded_input=False, size_average=True):
     if any('BatchNorm2d' in str(l.__class__.__name__) for l in net):

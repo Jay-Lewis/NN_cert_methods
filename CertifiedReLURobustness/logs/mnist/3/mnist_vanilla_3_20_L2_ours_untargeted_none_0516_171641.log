@@ -1,0 +1,56 @@
+2019-05-16 17:16:43.254847: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-05-16 17:16:43.263530: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3393270000 Hz
+2019-05-16 17:16:43.265501: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5620a2a53d40 executing computations on platform Host. Devices:
+2019-05-16 17:16:43.265549: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-16 17:16:43.462415: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-16 17:16:43.463284: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5620a28fbef0 executing computations on platform CUDA. Devices:
+2019-05-16 17:16:43.463306: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-16 17:16:43.463313: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-16 17:16:43.463560: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:0a:00.0
+totalMemory: 10.76GiB freeMemory: 8.28GiB
+2019-05-16 17:16:43.463599: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:41:00.0
+totalMemory: 10.76GiB freeMemory: 7.23GiB
+2019-05-16 17:16:43.463706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-16 17:16:43.465644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-16 17:16:43.465671: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-16 17:16:43.465678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-16 17:16:43.465683: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-16 17:16:43.465798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-16 17:16:43.466413: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+2019-05-16 17:16:43.469655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-16 17:16:43.469893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-16 17:16:43.469904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-16 17:16:43.469909: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-16 17:16:43.469914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-16 17:16:43.470004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-16 17:16:43.470163: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+/home/justin/Projects/NN_cert_methods/mnist_small.pkl
+----------------------------------
+Loaded pretrained network
+----------------------------------
+/home/justin/.conda/envs/DeepL/lib/python3.7/site-packages/matplotlib/figure.py:98: MatplotlibDeprecationWarning: 
+Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  "Adding an axes using the same arguments as a previous axes "
+WARNING:tensorflow:From /home/justin/.conda/envs/DeepL/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-16 17:16:48.063841: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+generating labels...
+labels generated
+36 images generated in total.
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+=================================
+[array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1.]), array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0.]), array([0., 0., 0., 0., 0., 1., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1.]), array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 1.]), array([0., 0., 0., 0., 1., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 1., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 1., 0., 0.])]

@@ -1,0 +1,42 @@
+2019-05-16 16:52:08.795836: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-05-16 16:52:08.809549: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3393270000 Hz
+2019-05-16 16:52:08.811253: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x561f851a6390 executing computations on platform Host. Devices:
+2019-05-16 16:52:08.811340: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-16 16:52:09.024782: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-16 16:52:09.025870: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x561f8504f360 executing computations on platform CUDA. Devices:
+2019-05-16 16:52:09.025918: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-16 16:52:09.025927: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-05-16 16:52:09.026289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:0a:00.0
+totalMemory: 10.76GiB freeMemory: 9.42GiB
+2019-05-16 16:52:09.026335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.665
+pciBusID: 0000:41:00.0
+totalMemory: 10.76GiB freeMemory: 10.60GiB
+2019-05-16 16:52:09.026445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-16 16:52:09.028518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-16 16:52:09.028543: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-16 16:52:09.028549: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-16 16:52:09.028554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-16 16:52:09.028688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-16 16:52:09.029239: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+2019-05-16 16:52:09.032270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2019-05-16 16:52:09.032438: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-16 16:52:09.032449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2019-05-16 16:52:09.032454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N 
+2019-05-16 16:52:09.032459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N 
+2019-05-16 16:52:09.032542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3635 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2019-05-16 16:52:09.032724: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3636 MB memory) -> physical GPU (device: 1, name: GeForce RTX 2080 Ti, pci bus id: 0000:41:00.0, compute capability: 7.5)
+Traceback (most recent call last):
+  File "main.py", line 145, in <module>
+    data = MNIST()
+  File "/home/justin/Projects/NN_cert_methods/CertifiedReLURobustness/setup_mnist.py", line 50, in __init__
+    train_data = extract_data("data/train-images-idx3-ubyte.gz", 60000)
+  File "/home/justin/Projects/NN_cert_methods/CertifiedReLURobustness/setup_mnist.py", line 23, in extract_data
+    with gzip.open(filename) as bytestream:
+  File "/home/justin/.conda/envs/DeepL/lib/python3.7/gzip.py", line 53, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "/home/justin/.conda/envs/DeepL/lib/python3.7/gzip.py", line 163, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'data/train-images-idx3-ubyte.gz'

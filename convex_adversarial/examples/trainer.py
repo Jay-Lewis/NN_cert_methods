@@ -66,7 +66,7 @@ def train_robust(loader, model, opt, epsilon, epoch, log, verbose,
             endline = '\n' if i % verbose == 0 else '\r'
             print('Epoch: [{0}][{1}/{2}]\t'
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
+                  'Results {data_time.val:.3f} ({data_time.avg:.3f})\t'
                   'Robust loss {rloss.val:.4f} ({rloss.avg:.4f})\t'
                   'Robust error {rerrors.val:.3f} ({rerrors.avg:.3f})\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
@@ -176,7 +176,7 @@ def train_baseline(loader, model, opt, epoch, log, verbose):
         if verbose and i % verbose == 0: 
             print('Epoch: [{0}][{1}/{2}]\t'
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
+                  'Results {data_time.val:.3f} ({data_time.avg:.3f})\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
                   'Error {errors.val:.3f} ({errors.avg:.3f})'.format(
                    epoch, i, len(loader), batch_time=batch_time,
@@ -276,7 +276,7 @@ def train_madry(loader, model, epsilon, opt, epoch, log, verbose):
         if verbose and i % verbose == 0: 
             print('Epoch: [{0}][{1}/{2}]\t'
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
+                  'Results {data_time.val:.3f} ({data_time.avg:.3f})\t'
                   'PGD Loss {ploss.val:.4f} ({ploss.avg:.4f})\t'
                   'PGD Error {perrors.val:.3f} ({perrors.avg:.3f})\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
