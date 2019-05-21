@@ -87,7 +87,8 @@ for network_name in network_names:
     num_pgd_iterations = 300
     pgd_lr = 0.01
 
-    pts = np.load(model_path + "acas_inputs.npy")[1:2]
+    data_path = os.getcwd() + "/Data/Acas_xu/"
+    pts = np.load(data_path + "acas_inputs.npy")
     pts = torch.Tensor(pts)
 
     ##################################################################################
@@ -110,31 +111,35 @@ for network_name in network_names:
     lower_bound_stuff = []
 
     for i, pt in enumerate(pts):
-            # Builds an object used to to hold algorithm parameters
-            cert_obj = geo.IncrementalGeoCertMultiProc(network, verbose=True,
-                                      hyperbox_bounds=[0.0, 1.0])
+        if i != 3:
+            continue
+        # Builds an object used to to hold algorithm parameters
+        cert_obj = geo.IncrementalGeoCertMultiProc(network, verbose=True,
+                                  hyperbox_bounds=[-1.0, 1.0], neuron_bounds='ia')
 
-            true_label = network(pt).squeeze().max(0)[1].item()
-            # Run Geocert
-            start = time.time()
-            output = cert_obj.min_dist_multiproc(pt.view(1, -1), num_proc=1, lp_norm=lp_norm, compute_upper_bound=
-                                       {"optimizer_kwargs": {"lr": pgd_lr}, "num_iterations": num_pgd_iterations})
+        true_label = network(pt).squeeze().max(0)[1].item()
+        # Run Geocert
+        start = time.time()
+        output = cert_obj.min_dist_multiproc(pt.view(1, -1), num_proc=1, lp_norm=lp_norm, problem_type='decision_problem', decision_radius = 0.1,
 
-            lp_dist, adv_ex_bound, adv_ex, best_example, ub_time, seen_polytopes, _, _,lower_bound_times, upper_bound_times = output
-            lower_bound_list = pop_all_from_queue(lower_bound_times)
-            upper_bound_list = pop_all_from_queue(upper_bound_times)
+                                             compute_upper_bound=
+                                   {"optimizer_kwargs": {"lr": pgd_lr}, "num_iterations": num_pgd_iterations})
 
-            end = time.time()
+        lp_dist, adv_ex_bound, adv_ex, best_example, ub_time, seen_polytopes, _, _,lower_bound_times, upper_bound_times = output
+        lower_bound_list = pop_all_from_queue(lower_bound_times)
+        upper_bound_list = pop_all_from_queue(upper_bound_times)
 
-            min_dists.append(lp_dist)
-            pgd_dists.append(adv_ex_bound)
-            lower_bound_stuff.append(lower_bound_list)
-            upper_bound_stuff.append(upper_bound_list)
-            print('TIME', end-start)
-            times.append(end-start)
-            num_polys.append(len(seen_polytopes))
-            poly_maps.append(seen_polytopes)
-            print('===========================================')
+        end = time.time()
+
+        min_dists.append(lp_dist)
+        pgd_dists.append(adv_ex_bound)
+        lower_bound_stuff.append(lower_bound_list)
+        upper_bound_stuff.append(upper_bound_list)
+        print('TIME', end-start)
+        times.append(end-start)
+        num_polys.append(len(seen_polytopes))
+        poly_maps.append(seen_polytopes)
+        print('===========================================')
 
     # =====================
     # Save Output
@@ -203,7 +208,7 @@ for network_name in network_names:
     #     mip_dists, mip_times = [], []
     #     for pt in pts:
     #         mip_start_time = time.time()
-    #         model = mip_verify.mip_solve_linf(network, pt, problem_type='min_dist')
+    #         model = mip_verify.mip_solve_linf(network, pt, problem_type='min_dist',box_bounds=(-1.0, 1.0))
     #
     #         mip_times.append(time.time() - mip_start_time)
     #         mip_dists.append(model.getObjective().getValue())
@@ -215,7 +220,7 @@ for network_name in network_names:
     #     output_dictionary = {'min_dists': mip_dists, 'times': mip_times}
     #
     #     cwd = os.getcwd()
-    #     filename = cwd + "/Results/MIP_out_" + network_name[0:-4] + "_" + lp_norm + ".pkl"
+    #     filename = cwd + "/Results/Acas_xu/MIP_out_" + network_name + "_" + lp_norm + ".pkl"
     #     f = open(filename, 'wb')
     #     pickle.dump(output_dictionary, f)
     #     f.close()
