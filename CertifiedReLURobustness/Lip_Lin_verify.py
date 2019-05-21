@@ -286,6 +286,6 @@ def get_lp_text(norm_lip):
     if norm_lip == '2':
         return 'l_2'
     elif norm_lip == 'i':
-        return 'linf'
+        return 'l_inf'
     else:
         raise NotImplementedError

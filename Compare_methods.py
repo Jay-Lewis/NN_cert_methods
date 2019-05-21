@@ -13,7 +13,10 @@ import sys
 sys.path.append('..')
 sys.path.append('mister_ed') # library for adversarial examples
 sys.path.append('CertifiedReLURobustness')
+# sys.path.append('CROWN-Robustness-Certification')
 sys.path.append('geometric-certificates')
+from Lip_Lin_verify import Lin_Lip_verify_modded
+# from CROWN_verify import CROWN_verify_modded
 import geocert_oop as geo_oop
 import geocert_multi as geo
 import utilities as utils
@@ -25,8 +28,16 @@ import torch
 from os import listdir
 from os.path import isfile, join
 import mnist.mnist_loader as  ml
+import mip_verify
 MNIST_DIM = 784
 
+def pop_all_from_queue(mp_queue):
+    output = []
+    while True:
+        try:
+            output.append(mp_queue.get_nowait())
+        except:
+            return output
 
 ##################################################################################
 #                                                                                #
@@ -35,7 +46,7 @@ MNIST_DIM = 784
 ##################################################################################
 
 num_img_batches = 1
-batch_size = 16
+batch_size = 128
 
 # =====================
 # Load Network
@@ -44,8 +55,7 @@ batch_size = 16
 
 model_path = os.getcwd() + "/Models/"
 network_names = [f for f in listdir(model_path) if isfile(join(model_path, f))]
-#TODO: change to all networks
-network_names = network_names[0:2]
+network_names = network_names[3:-1]
 
 for network_name in network_names:
 
@@ -114,53 +124,6 @@ for network_name in network_names:
     print('Num Images:', len(images))
 
 
-
-    # ##################################################################################
-    # #                                                                                #
-    # #                       Geocert                                                  #
-    # #                                                                                #
-    # ##################################################################################
-    #
-    # print('-------------------------------------------')
-    # print('Starting Geocert')
-    # print('-------------------------------------------')
-    #
-    # # Run Geocert on a set of mnist digits
-    # min_dists = []
-    # pgd_dists = []
-    # num_polys = []
-    # poly_maps = []
-    # times = []
-    # for image in images:
-    #         # Builds an object used to to hold algorithm parameters
-    #         cert_obj = geo.IncrementalGeoCert(network, verbose=True, config_fxn='parallel',
-    #                                   config_fxn_kwargs={'num_jobs': 1},
-    #                                   hyperbox_bounds=[0.0, 1.0])
-    #
-    #         # plt.gray()
-    #         # plt.imshow(image.squeeze())
-    #         # plt.show()
-    #         true_label = network(image).squeeze().max(0)[1].item()
-    #         # Run Geocert
-    #         start = time.time()
-    #         output = cert_obj.min_dist(image.view(1, -1), lp_norm=lp_norm, compute_upper_bound=
-    #                                    {"optimizer_kwargs": {"lr": pgd_lr}, "num_iterations": num_pgd_iterations})
-    #         lp_dist, adv_ex_bound, adv_ex, best_example, boundary_facet, seen_poly_map = output
-    #         end = time.time()
-    #         # plt.gray()
-    #         # best_example_np = utils.as_numpy(best_example).reshape(28,28)
-    #         # plt.imshow(best_example_np.squeeze())
-    #         # plt.show()
-    #
-    #         min_dists.append(lp_dist)
-    #         pgd_dists.append(adv_ex_bound)
-    #         print('TIME', end-start)
-    #         times.append(end-start)
-    #         num_polys.append(len(seen_poly_map))
-    #         poly_maps.append(seen_poly_map)
-    #         print('===========================================')
-
-
     ##################################################################################
     #                                                                                #
     #                       Geocert                                                  #
@@ -177,9 +140,11 @@ for network_name in network_names:
     num_polys = []
     poly_maps = []
     times = []
+    upper_bound_stuff = []
+    lower_bound_stuff = []
+
     for i, image in enumerate(images):
-            if i < 3:
-                continue
+
             # Builds an object used to to hold algorithm parameters
             cert_obj = geo.IncrementalGeoCertMultiProc(network, verbose=True,
                                       hyperbox_bounds=[0.0, 1.0])
@@ -191,11 +156,15 @@ for network_name in network_names:
                                        {"optimizer_kwargs": {"lr": pgd_lr}, "num_iterations": num_pgd_iterations})
 
             lp_dist, adv_ex_bound, adv_ex, best_example, ub_time, seen_polytopes, _, _,lower_bound_times, upper_bound_times = output
+            lower_bound_list = pop_all_from_queue(lower_bound_times)
+            upper_bound_list = pop_all_from_queue(upper_bound_times)
 
             end = time.time()
 
             min_dists.append(lp_dist)
             pgd_dists.append(adv_ex_bound)
+            lower_bound_stuff.append(lower_bound_list)
+            upper_bound_stuff.append(upper_bound_list)
             print('TIME', end-start)
             times.append(end-start)
             num_polys.append(len(seen_polytopes))
@@ -207,7 +176,9 @@ for network_name in network_names:
     # =====================
 
     output_dictionary = {'min_dists': min_dists , 'pgd_dists': pgd_dists, 'num_polys': num_polys,
-                        'poly_maps': [list(_) for _ in poly_maps], 'times': times}
+                        'poly_maps': [list(_) for _ in poly_maps], 'times': times, 'lower_bound_stuff': lower_bound_stuff,
+                         'upper_bound_stuff': upper_bound_stuff}
+
 
     cwd = os.getcwd()
     filename = cwd + "/Results/Geocert_out_"+network_name[0:-4]+"_"+lp_norm+".pkl"
@@ -230,9 +201,68 @@ for network_name in network_names:
     # =====================
     # Run Fast Lin / Fast LIP
     # =====================
-    from CertifiedReLURobustness.Lip_Lin_verify import Lin_Lip_verify_modded
 
-    dists, times = Lin_Lip_verify_modded(network, network_name, images, labels)
+    norm_text = lambda lp_norm:  '2' if lp_norm == 'l_2' else 'i'
+
+    linlip_dists, linlip_times = Lin_Lip_verify_modded(network, network_name, images, labels, norm=norm_text(lp_norm))
+
+    # ##################################################################################
+    # #                                                                                #
+    # #                               CROWN                                            #
+    # #                                                                                #
+    # ##################################################################################
+    #
+    # print('-------------------------------------------')
+    # print('Starting CROWN')
+    # print('-------------------------------------------')
+    #
+    # # =====================
+    # # Run Fast Lin / Fast LIP
+    # # =====================
+    #
+    # norm_text = lambda lp_norm: '2' if lp_norm == 'l_2' else 'i'
+    #
+    # crown_dists, crown_times = CROWN_verify_modded(network, network_name, images, labels, norm=norm_text(lp_norm))
+
+
+
+    ##################################################################################
+    #                                                                                #
+    #                       Mixed Integer Programming                                #
+    #                                                                                #
+    ##################################################################################
+    if lp_norm == 'l_inf':
+        print('-------------------------------------------')
+        print('Starting MIP VERIFY')
+        print('-------------------------------------------')
+        mip_dists, mip_times = [], []
+        for image in images:
+            mip_start_time = time.time()
+            model = mip_verify.mip_solve_linf(network, image, problem_type='min_dist')
+
+            mip_times.append(time.time() - mip_start_time)
+            mip_dists.append(model.getObjective().getValue())
+
+        # =====================
+        # Save Output
+        # =====================
+
+        output_dictionary = {'min_dists': mip_dists, 'times': mip_times}
+
+        cwd = os.getcwd()
+        filename = cwd + "/Results/MIP_out_" + network_name[0:-4] + "_" + lp_norm + ".pkl"
+        f = open(filename, 'wb')
+        pickle.dump(output_dictionary, f)
+        f.close()
+
+    else:
+        print('-------------------------------------------')
+        print('SKIPPING MIP FOR L2 FOR NOW')
+        print('-------------------------------------------')
+
+
+
+
 
     ##################################################################################
     #                                                                                #
@@ -254,7 +284,10 @@ for network_name in network_names:
         return sorted(elements)[perc_idx]
 
 
-    methods = ['Geocert', 'Lip_Lin']
+    if lp_norm == 'l_2':
+        methods = ['Geocert', 'Lip_Lin']
+    elif lp_norm == 'l_inf':
+        methods = ['Geocert', 'Lip_Lin', 'MIP']
 
     for method in methods:
         # =====================
@@ -287,5 +320,15 @@ for network_name in network_names:
 #                                                                                #
 ##################################################################################
 
-
+# =====================
+# Load and Display Output
+# =====================
+print('------------------------------------')
+print('Method:  ', method)
+print('------------------------------------')
+cwd = os.getcwd()
+filename = cwd + "/Results/" + method + "_out_"+str(network_name[0:-4])+"_"+lp_norm+".pkl"
+f = open(filename,"rb")
+output_dict = pickle.load(f)
+f.close()
 
